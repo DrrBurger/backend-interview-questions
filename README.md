@@ -1,9 +1,9 @@
 # Go Interview Questions
 Описание репозитория
 
->***Вопрос: Расскажи немного о истории языка Go?***
+***Вопрос: Расскажи немного о истории языка Go?***
 
 <details>
-  <summary>Ответ</summary>
+  <summary>Ответ <- Click</summary>
 История языка
 </details>
