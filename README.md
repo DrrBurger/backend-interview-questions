@@ -1,9 +1,8 @@
-# go-interview-questions
+# Go Interview Questions
 
+Вопрос:
+Расскажи о языке Go
 <details>
-  <summary>Нажмите здесь, чтобы раскрыть список</summary>
-
-- Элемент 1
-- Элемент 2
-- Элемент 3
+  <summary>Ответ</summary>
+История языка
 </details>
