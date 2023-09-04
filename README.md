@@ -49,6 +49,26 @@ p.s.s Вы так же можете предложить свои вопросы
 
 <details>
   <summary>Ответ <- Click</summary>
-    
+
+    - Транспортный уровень (как TCP и UDP):
+        - SCTP (Stream Control Transmission Protocol) — протокол, предназначенный для передачи данных с поддержкой множественных потоков и устойчивый к ошибкам.
+        - CCP (Datagram Congestion Control Protocol) — протокол, предназначенный для передачи потоковых медиа.
+        
+    - Сетевой уровень:
+        - IP (Internet Protocol) — протокол маршрутизации.
+        - ICMP (Internet Control Message Protocol) — протокол управляющих сообщений.
+        - OSPF (Open Shortest Path First) — протокол динамической маршрутизации.
+
+    - Канальный уровень:
+        - Ethernet — наиболее распространенный протокол канального уровня.
+        - Wi-Fi — набор стандартов для беспроводных локальных сетей.
+
+    - Прикладной уровень:
+        - HTTP/HTTPS (HyperText Transfer Protocol/Secure) — протокол передачи гипертекста.
+        - FTP (File Transfer Protocol) — протокол передачи файлов.
+        - SMTP (Simple Mail Transfer Protocol) — протокол для передачи электронной почты.
+        - DNS (Domain Name System) — система преобразования доменных имен в IP-адреса.
+        - MQTT (Message Queuing Telemetry Transport) — протокол мессенджинга для IoT устройств.
+        - Это далеко не исчерпывающий список, и существует множество других протоколов для различных специфических задач и сценариев использования.
    
 </details>
