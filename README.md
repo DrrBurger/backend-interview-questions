@@ -24,7 +24,7 @@ p.s.s Вы так же можете предложить свои вопросы
 
 ## Answers
 
-### Вопрос: В чем отличие протоколов TCP и UDP? <a name="tcp-udp"></a>
+### Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
 <details>
   <summary>Ответ <- Click</summary>
