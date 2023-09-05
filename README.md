@@ -12,10 +12,8 @@ p.s.s Вы так же можете предложить свои вопросы
 # Questions
 
 <details>
-  <summary><h2>Категории вопросов</h2></summary>
+  <summary><h2>Категории вопросов</h2></summary>  
   
----
-
   -  <details>
       <summary>Сеть и всё что с ней связано</summary>
     
