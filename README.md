@@ -182,11 +182,10 @@
 
 ---
 
-
 # Answers
 
 <details>
-    <summary>Garbage collector</summary>
+    <summary>Общее</summary>
 
     ### Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
