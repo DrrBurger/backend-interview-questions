@@ -192,7 +192,8 @@
 
 <!-- Сеть и всё что с ней связано -->
 <details>
-    <summary>Общее</summary>
+    <summary>Сеть и всё что с ней связано</summary>
+  
     Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
     <details>
@@ -218,25 +219,25 @@
 
 <!-- Операционная система -->
 <details>
-    <summary>Общее</summary>
+    <summary>Операционная система</summary>
 
 </details>
 
 <!-- Базы данных -->
 <details>
-    <summary>Общее</summary>
+    <summary>Базы данных</summary>
 
 </details>
 
 <!-- Golang -->
 <details>
-    <summary>Общее</summary>
+    <summary>Golang</summary>
 
 </details>
 
 <!-- Алгоритмы -->
 <details>
-    <summary>Общее</summary>
+    <summary>Алгоритмы</summary>
 
 </details>
 
