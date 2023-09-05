@@ -43,7 +43,7 @@
 </details>
 
 <details>
-  <summary>Golang</summary>
+  <summary>Golang</summary>  
 
 - <details>
     <summary>Общая информация</summary>  
