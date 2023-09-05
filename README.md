@@ -444,12 +444,25 @@
 - <details>
     <summary><h3><i>Общие вопросы по языку Go</i></h3></summary>
 
+---
+
   - Вопрос №1:
     
     <details>
       <summary>Ответ</summary>
   
     </details>
+    
+---
+
+  - Вопрос №2:
+    
+    <details>
+      <summary>Ответ</summary>
+  
+    </details>
+    
+---
   </details>
 
 </details>
