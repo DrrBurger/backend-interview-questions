@@ -444,7 +444,16 @@
 - <details>
     <summary><h3><i>Общие вопросы по языку Go</i></h3></summary>
   
-    - jndtnas
+    ---
+
+Вопрос №1:
+
+<details>
+  <summary>Ответ</summary>
+
+</details>
+
+---
   </details>
 
 </details>
