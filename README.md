@@ -45,13 +45,11 @@
 <details>
   <summary>Golang</summary>
 
-<details>
-  <summary>Golang</summary>  
-
-
-</details>
-
-
+  <details>
+    <summary>Строки</summary>  
+  
+  
+  </details>
 </details>
 
 <details>
