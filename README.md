@@ -187,7 +187,7 @@
 <details>
     <summary>Общее</summary>
 
-    ### Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
+     Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
 <details>
   <summary>Ответ <- Click</summary>
