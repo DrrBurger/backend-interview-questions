@@ -45,11 +45,11 @@
 <details>
   <summary>Golang</summary>
 
-  <details>
-    <summary>Строки</summary>  
+ - <details>
+     <summary>Строки</summary>  
   
-  
-  </details>
+   1. [что такое строки](#ые)
+   </details>
 </details>
 
 <details>
