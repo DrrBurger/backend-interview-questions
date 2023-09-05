@@ -22,7 +22,7 @@
 
 1. Вопрос: [В чем отличие протоколов TCP и UDP?]
 
-- <details>
+  <details>
    <summary>Ответ <- Click</summary>
 
     - TCP (Transmission Control Protocol)
@@ -43,7 +43,7 @@
 
 ---
 
-2. <h3>Вопрос: [Какие еще протоколы существуют?]</h3>
+2. Вопрос: [Какие еще протоколы существуют?]
 
 - <details>
   <summary>Ответ <- Click</summary>
