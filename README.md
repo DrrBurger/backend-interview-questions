@@ -13,7 +13,6 @@ p.s.s Вы так же можете предложить свои вопросы
 
 <details>
   <summary>Общие вопросы</summary>
-  
     <details>
       <summary>Подраздел</summary>
       
