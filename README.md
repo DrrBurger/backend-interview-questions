@@ -185,7 +185,10 @@
 
 # Answers
 
-### Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
+<details>
+    <summary>Garbage collector</summary>
+
+    ### Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
 <details>
   <summary>Ответ <- Click</summary>
@@ -205,6 +208,10 @@
     - Когда UDP предпочтительнее:  
        - Потоковое медиа, онлайн-игры, VoIP — там, где задержка критична и потеря пакетов допустима.  
 </details>
+
+</details>
+
+
 
 ---
 
