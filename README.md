@@ -14,6 +14,7 @@ p.s.s Вы так же можете предложить свои вопросы
 <details>
   <summary>Категории</summary>
 
+---
   
   -  <details>
       <summary>Сеть и всё что с ней связано</summary>
