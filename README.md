@@ -12,7 +12,7 @@ p.s.s Вы так же можете предложить свои вопросы
 # Questions
 
 <details>
-  <summary>Категории</summary>
+  <summary><h2>Категории вопросов</h2></summary>
   
 ---
 
