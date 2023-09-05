@@ -441,6 +441,11 @@
 <details>
     <summary><h2><i>Golang</i></h2></summary>
 
+<details>
+    <summary><h3><i>Общие вопросы по языку Go</i></h3></summary>
+
+</details>
+
 </details>
 
 <!-- Алгоритмы -->
