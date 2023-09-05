@@ -196,7 +196,7 @@
   
    Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
-   - <details>
+   [] <details>
       <summary>Ответ <- Click</summary>
     
         - TCP (Transmission Control Protocol)
