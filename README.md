@@ -6,137 +6,6 @@
 
 ---
 
-# Категории вопросов
-
-<!-- Golang -->
-<details>
-  <summary>Golang</summary>  
-
-- <details>
-    <summary>Общая информация</summary>  
-
-  - [Расскажи кратко о языке Go](#go-intro)
-  - [Как реализовано хранилище памяти в Go?](#go-store)
-  - [Какие типы данных есть в языке Go?](#go-types)
-  - [Что такое пакеты в go?](#package)
-  - [Что такое глобальная переменная?](#global)
-  - [Что такое константы и можно ли их изменять?](#const)
-  - [Зачем фигурные скобки с не объявленным оператором внутри функции?](#scope)
-  - [В go есть оператор switch case, можно ли выполнить несколько условий в одном объявленном операторе?](#switch)
-  - [Что такое iota?](#iota)
-  - [Как вручную задать количество процессоров для приложения?](#process)
-  - [Как принудительно переключить контекст?](#contekst)
-  - [Что такое graceful shutdown?](#gracefull)
-  - [Что обозначает * и &?](#pointers)
-  - [Как происходит передача параметров в функцию?](#func-args)
-  - [Есть ли особенности поведения при передаче map и slice в функцию?](#map-slice-args)
-  - [Как функции делятся памятью?](#func-storage)
-  </details>
-
-- <details>
-    <summary>Численные типы</summary>  
-
-  - [Какие численные типы есть?](#ints)
-  - [Какой результат получим если разделить int на 0 и float на 0?](#division)
-  </details>
-
-- <details>
-    <summary>Строки</summary>  
-
-  - [Что представляют собой строки в go?](#go-str)
-  - [Как преобразовать строку в int и наоборот? Можно ли сделать int(string) и string(int) соответственно?](#str-int)
-  </details>
-
-- <details>
-    <summary>Интерфейсы</summary>  
-
-  - [Интерфейсы: Что такое интерфейс в Go? Зачем нужен на практике? Примеры задач где стоит ввести?](#interface)
-  - [Что такое пустой интерфейс?](#nil-interface)
-  - [Как устроен внутри nil интерфейс vs nil внутри интерфейса?](#nil-interface1)
-  - [Как определить тип интерфейса?](#interface-type)
-  - [В каком пакете лучше объявлять интерфейсы и почему?](#interface-package)
-  </details>
-
-- <details>
-    <summary>Массивы и слайсы</summary>  
-
-  - [Что такое слайс и чем он отличается от массива?](#slice)
-  - [Какой размер массива выделяется под слайс при его расширении за рамки его емкости?](#arr-slice)
-  </details>
-
-- <details>
-    <summary>Map</summary>  
-
-  - [Как реализована map(карта) go?](#map)
-  - [Почему нельзя брать ссылку на значение, хранящееся по ключу в map?](#map1)
-  - [Что такое эвакуация, и в каком случае она будет происходить?](#map2)
-  - [Какие есть особенности синтаксиса получения и записи значений в map??](#map3)
-  - [Как происходит поиск по ключу в map?](#map4)
-  </details>
-
-- <details>
-    <summary>Defer</summary>  
-
-  - [Зачем используется ключевое слово defer в go?](#defer)
-  - [Каков порядок возврата при использовании несколько функций с defer в рамках одной внешней функции?](#defer-order)
-  - [Как передаются значения в функции, перед которыми указано ключевое слово defer?](#defer-value)
-  </details>
-
-- <details>
-    <summary>Горутины</summary>  
-
-  - [Что такое поток и горутина?](#goroutin)
-  - [Сколько можно запустить потоков и горутин?](#goroutine-count)
-  - [Каков минимальный и максимальный вес горутин?](#goroutin-wight)
-  - [Что будет если размер горутины превысил допустимый максимум?](#goroutin-wight-max)
-  - [Какие есть способы остановить все горутины в приложении?](#goroutin-cancel)
-  - [Как наладить связь между горутинами?](#sync-goruotins)
-  </details>
-
-- <details>
-    <summary>Примитивы синхронизации</summary>  
-
-  - [Какие есть примитивы синхронизации? Расскажи немного про каждый](#primitivs)
-  - [Что такое channel?](#channel)
-  - [Что такое буферизированный и небуферизированный channel?](#buf-channel)
-  - [Какие действия можно произвести с каналом?](#chanel-use)
-  - [Что будет если писать/читать в nil channel?](#nil-channel)
-  - [Что будет если писать/читать в/из закрытый channel?](#close-channel)
-  - [Как закрыть channel? Что с ним происходит?](#close-channel1)
-  - [Какие есть инструкции для чтения из channel?](#channel-ass)
-  </details>
-
-- <details>
-    <summary>Switch/Select/Case</summary>  
-
-  - [Как сделать select неблокирующим?](#select-block)
-  - [Какой порядок исполнения операций case в select?](#select-block-case)
-  </details>
-
-- <details>
-    <summary>Context</summary>  
-
-  - [Что такое context в GO?](#go-context)
-  - [Для чего применяется context?](#context-useful)
-  - [Чем отличается context.Background от context.TODO?](#ctx-back)
-  - [Как передавать значения и вычитывать их из context?](#ctx-val)
-  - [Каковы отличия context.WithCancel, context.WithDeadline, context.WithTimeout?](#ctx-deadline)
-  - [Как обрабатывать отмену context?](#ctx-cancelation)
-  </details>
-
-- <details>
-    <summary>Garbage collector</summary>  
-
-  - [Что такое сборщик мусора и по какому алгоритму он реализован в Go?](#garbage)
-  - [Расскажите про алгоритм mark and sweep](#mark-sweep)
-  - [Когда запускается сборщик мусора?](#gc-time)
-  - [Сколько ресурсов потребляет сборщик мусора?](#gc-resource)
-  </details>
-
-</details>
-
----
-
 # Вопросы и ответы
 
 <!-- ОБЩЕЕ -->
@@ -446,7 +315,7 @@
 
   ---
 
-  - Вопрос №1:
+  - Вопрос №1: [ Расскажи кратко о языке Go ]
     
     <details>
       <summary>Ответ</summary>
@@ -455,7 +324,7 @@
 
   ---
 
-  - Вопрос №2:
+  - Вопрос №2: [ Как реализовано хранилище памяти в Go? ]
 
     <details>
       <summary>Ответ</summary>
@@ -464,7 +333,7 @@
 
   ---
 
-  - Вопрос №3:
+  - Вопрос №3: [ Какие типы данных есть в языке Go? ]
 
     <details>
       <summary>Ответ</summary>
@@ -473,7 +342,7 @@
 
   ---
 
-  - Вопрос №4:
+  - Вопрос №4: [ Что такое пакеты в go? ]
 
     <details>
       <summary>Ответ</summary>
@@ -482,7 +351,7 @@
 
   ---
 
-  - Вопрос №5:
+  - Вопрос №5: [ Что такое глобальная переменная? ]
 
     <details>
       <summary>Ответ</summary>
@@ -491,7 +360,7 @@
 
   ---
 
-  - Вопрос №6:
+  - Вопрос №6: [ Что такое константы и можно ли их изменять? ]
 
     <details>
       <summary>Ответ</summary>
@@ -500,7 +369,7 @@
 
   ---
 
-  - Вопрос №7:
+  - Вопрос №7: [ Зачем фигурные скобки с не объявленным оператором внутри функции? ]
 
     <details>
       <summary>Ответ</summary>
@@ -509,7 +378,7 @@
 
   ---
 
-  - Вопрос №8:
+  - Вопрос №8: [ В go есть оператор switch case, можно ли выполнить несколько условий в одном объявленном операторе? ]
 
     <details>
       <summary>Ответ</summary>
@@ -518,7 +387,7 @@
 
   ---
 
-  - Вопрос №9:
+  - Вопрос №9: [ Что такое iota? ]
 
     <details>
       <summary>Ответ</summary>
@@ -527,7 +396,7 @@
 
   ---
 
-  - Вопрос №10:
+  - Вопрос №10: [ Как вручную задать количество процессоров для приложения? ]
 
     <details>
       <summary>Ответ</summary>
@@ -536,7 +405,7 @@
 
   ---
 
-  - Вопрос №11:
+  - Вопрос №11: [ Как принудительно переключить контекст? ]
 
     <details>
       <summary>Ответ</summary>
@@ -545,7 +414,7 @@
 
   ---
 
-  - Вопрос №12:
+  - Вопрос №12: [ Что такое graceful shutdown? ]
 
     <details>
       <summary>Ответ</summary>
@@ -554,7 +423,7 @@
 
   ---
 
-  - Вопрос №13:
+  - Вопрос №13: [ Что обозначает * и &? ]
 
     <details>
       <summary>Ответ</summary>
@@ -563,7 +432,7 @@
 
   ---
 
-  - Вопрос №14:
+  - Вопрос №14: [ Как происходит передача параметров в функцию? ]
 
     <details>
       <summary>Ответ</summary>
@@ -572,7 +441,7 @@
 
   ---
 
-  - Вопрос №15:
+  - Вопрос №15: [ Есть ли особенности поведения при передаче map и slice в функцию? ]
 
     <details>
       <summary>Ответ</summary>
@@ -581,7 +450,505 @@
 
   ---
 
-  - Вопрос №16:
+  - Вопрос №16: [ Как функции делятся памятью? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Численные типы</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Какие численные типы есть? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Какой результат получим если разделить int на 0 и float на 0? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Строки</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Что представляют собой строки в go? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Как преобразовать строку в int и наоборот? Можно ли сделать int(string) и string(int) соответственно? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Интерфейсы</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Интерфейсы: Что такое интерфейс в Go? Зачем нужен на практике? Примеры задач где стоит ввести? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Что такое пустой интерфейс? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Как устроен внутри nil интерфейс vs nil внутри интерфейса? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Как определить тип интерфейса? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №5: [ В каком пакете лучше объявлять интерфейсы и почему? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Массивы и слайсы</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Что такое слайс и чем он отличается от массива? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Какой размер массива выделяется под слайс при его расширении за рамки его емкости? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Map</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Как реализована map(карта) go? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Почему нельзя брать ссылку на значение, хранящееся по ключу в map? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Что такое эвакуация, и в каком случае она будет происходить? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Какие есть особенности синтаксиса получения и записи значений в map? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №5: [ Как происходит поиск по ключу в map? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Defer</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Зачем используется ключевое слово defer в go? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Каков порядок возврата при использовании несколько функций с defer в рамках одной внешней функции? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Как передаются значения в функции, перед которыми указано ключевое слово defer? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Горутины</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Что такое поток и горутина? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Сколько можно запустить потоков и горутин? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Каков минимальный и максимальный вес горутин? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Что будет если размер горутины превысил допустимый максимум? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №5: [ Какие есть способы остановить все горутины в приложении? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №6: [ Как наладить связь между горутинами? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Примитивы синхронизации</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Какие есть примитивы синхронизации? Расскажи немного про каждый ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Что такое channel? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Что такое буферизированный и небуферизированный channel? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Какие действия можно произвести с каналом? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №5: [ Что будет если писать/читать в nil channel? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №6: [ Что будет если писать/читать в/из закрытый channel? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №7: [ Как закрыть channel? Что с ним происходит? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №8: [ Какие есть инструкции для чтения из channel? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Switch/Select/Case</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Как сделать select неблокирующим? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Какой порядок исполнения операций case в select? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Context</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Что такое context в GO? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Для чего применяется context? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Чем отличается context.Background от context.TODO? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Как передавать значения и вычитывать их из context? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №5: [ Каковы отличия context.WithCancel, context.WithDeadline, context.WithTimeout? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №6: [ Как обрабатывать отмену context? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>Garbage Collector</i></h3></summary>
+
+  ---
+
+  - Вопрос №1: [ Что такое сборщик мусора и по какому алгоритму он реализован в Go? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Расскажите про алгоритм mark and sweep ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Когда запускается сборщик мусора? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Сколько ресурсов потребляет сборщик мусора? ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    </details>
+
+  ---
+
+  </details>
+
+- <details>
+    <summary><h3><i>ООП в Golang</i></h3></summary>
+
+  ---
+
+  - Вопрос №1:
 
     <details>
       <summary>Ответ</summary>
@@ -614,22 +981,3 @@
 ---
 
 </details>
-
-
-
-
-
-<!-- Шаблон -->
-
----
-
-Вопрос №1:
-
-<details>
-  <summary>Ответ</summary>
-
-</details>
-
----
-
-
