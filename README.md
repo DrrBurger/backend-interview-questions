@@ -13,7 +13,6 @@ p.s.s Вы так же можете предложить свои вопросы
 
 <details>
     <summary>Верхний уровень</summary>
-  
     <details>
       <summary>Вложенный уровень 1</summary>
       
