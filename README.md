@@ -8,6 +8,7 @@ P.S
 Если вы нашли не точность либо у вас есть свои вопросы которые вы хотели бы добавить, обязательно пишите и не стесняйтесь!!!
 
 ---
+![Logo]([https://example.com/logo.png](https://github.com/DrrBurger/Photos_for_git/blob/master/1_3UreHEOa70zgNwE3JeFoHQ.webp))
 
 # Вопросы и ответы
 
