@@ -24,8 +24,6 @@
 - [Что такое конкурентность?](#concurency)
 </details>
 
-
-
 <!-- Golang -->
 <details>
   <summary>Golang</summary>  
@@ -167,6 +165,9 @@
 <!-- ОБЩЕЕ -->
 <details>
     <summary>Общее</summary>
+
+---
+
 
 </details>
 
@@ -311,10 +312,9 @@
 <details>
     <summary>Алгоритмы</summary>
 
-</details>
+---
 
-
-### Вопрос: [Как отсортировать файл на 100GB с 1GB ОЗУ?]
+Вопрос: [ Как отсортировать файл на 100GB с 1GB ОЗУ? ]
 
 <details>
   <summary>Ответ <- Click</summary>
@@ -326,6 +326,11 @@
 </details>
 
 ---
+
+</details>
+
+
+
 
 ### Вопрос: [Что такое микросервисы?] <a name="micro"></a>
 
