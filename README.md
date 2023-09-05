@@ -196,7 +196,7 @@
 
 ---
 
-- Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
+1. Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
 - <details>
    <summary>Ответ <- Click</summary>
