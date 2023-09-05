@@ -148,7 +148,7 @@
 
 <!-- ОБЩЕЕ -->
 <details>
-    <summary><h2>Общее</h2></summary>
+    <summary><u><i>Общее</i></u></summary>
 
 ---
 
