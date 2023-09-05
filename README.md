@@ -194,9 +194,9 @@
 <details>
     <summary>Сеть и всё что с ней связано</summary>
   
-   - Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
+   Вопрос: [В чем отличие протоколов TCP и UDP?] <a name="tcp-udp"></a>
 
-    <details>
+   - <details>
       <summary>Ответ <- Click</summary>
     
         - TCP (Transmission Control Protocol)
@@ -213,7 +213,7 @@
            
         - Когда UDP предпочтительнее:  
            - Потоковое медиа, онлайн-игры, VoIP — там, где задержка критична и потеря пакетов допустима.  
-    </details>
+     </details>
 
 </details>
 
