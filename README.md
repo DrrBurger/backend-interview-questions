@@ -1969,3 +1969,20 @@ P.S.S.
 ---
 
 </details>
+
+<!-- GIT -->
+<details>
+    <summary><h2><i>GIT</i></h2></summary>
+
+---
+
+Вопрос №1: [ Soon ... ]
+
+<details>
+  <summary>Ответ</summary>
+
+</details>
+
+---
+
+</details>
