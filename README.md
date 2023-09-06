@@ -1932,3 +1932,20 @@ P.S.S.
 </details>
 
 </details>
+
+<!-- Практические задачи -->
+<details>
+    <summary><h2><i>Практические задачи</i></h2></summary>
+
+---
+
+Вопрос №1: [ Soon ... ]
+
+<details>
+  <summary>Ответ</summary>
+
+</details>
+
+---
+
+</details>
