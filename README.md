@@ -18,7 +18,7 @@ P.S.S.
   То смело пишите мне я обязательно исправлю/добавлю вопрос/ответ
 
 ---
-<p style="text-align: center;">
+<p align="center">
   <img src="https://github.com/DrrBurger/Photos_for_git/blob/master/1_3UreHEOa70zgNwE3JeFoHQ.webp" alt="logo">
 </p>
 
