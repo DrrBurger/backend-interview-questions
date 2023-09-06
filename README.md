@@ -12,6 +12,9 @@ P.S.
 Вы будете благодарны себе если выполните инструкцию в точности как написано.
 
 ---
+<p align="center">
+  <img src="https://github.com/DrrBurger/Photos_for_git/blob/master/1_3UreHEOa70zgNwE3JeFoHQ.webp" alt="logo">
+</p>
 
 # Вопросы и ответы
 
