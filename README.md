@@ -15,6 +15,7 @@ P.S.
 <p align="center">
   <img src="https://github.com/DrrBurger/Photos_for_git/blob/master/1_3UreHEOa70zgNwE3JeFoHQ.webp" alt="logo">
 </p>
+
 ---
 
 # Вопросы и ответы
