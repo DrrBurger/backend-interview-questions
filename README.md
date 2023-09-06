@@ -19,7 +19,7 @@ P.S.S.
 
 ---
 <p style="text-align: center;">
-  <img src="https://github.com/DrrBurger/Photos_for_git/blob/master/1_3UreHEOa70zgNwE3JeFoHQ.webp" alt="logo">
+  <img src="https://github.com/DrrBurger/Photos_for_git/blob/master/1_3UreHEOa70zgNwE3JeFoHQ.webp" alt="logo" style="display: block; margin: auto;">
 </p>
 
 ---
