@@ -4,11 +4,19 @@
 Вопросы условно делятся на: общие вопросы и вопросы непосредственно по самому языку Go.
 
 # Инструкции по применению
-Настоятельно рекомендую, прежде чем открывать ответ на вопрос попробовать ответить на него самостоятельно.  
-Если ответить не получается, попробуйте выдумать ответ основываясь на уже имеющихся у вас знаниях.  
-И только если вы в полном ступоре открывайте ответ на вопрос.
+- Настоятельно рекомендую, прежде чем открывать ответ на вопрос попробовать ответить на него самостоятельно.  
+- Если ответить не получается, попробуйте выдумать ответ основываясь на уже имеющихся у вас знаниях.  
+- И только если вы в полном ступоре открывайте ответ на вопрос.  
+  
+- У практических задач рядом с вопросом будет стоять сложность:  ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+ ![Static Badge](https://img.shields.io/badge/Medium-yellow?color=yellow)
+ ![Static Badge](https://img.shields.io/badge/Hard-red) 
+
+
+---
 
 P.S.  
+  
 Вы будете благодарны себе если выполните инструкцию в точности как написано.
 
 P.S.S.
@@ -16,6 +24,8 @@ P.S.S.
 - У вас есть свой вопрос который вы добавили бы в список
 - Вы недавно проходили собеседование  
   То смело пишите мне я обязательно исправлю/добавлю вопрос/ответ
+
+---
 
 # Features
 Данный репозиторий будет обновляться по мере появления новых вопросов и актуальной информации.  
@@ -1810,13 +1820,187 @@ P.S.S.
 <details>
     <summary><h2><i>Практические задачи Golang</i></h2></summary>
 
+<!-- Map -->
+- <details>
+    <summary><h2><i>Map</i></h2></summary>
+
+  ---
+
+  - Вопрос №1: [ Что выведет код? (Инициализация и добавление элементов) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      m := map[string]int{}
+      m["a"] = 1
+      m["b"] = 2
+      fmt.Println(len(m))
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      В этой задаче создаётся пустая карта `m` с ключами типа `string` и значениями типа `int`. Затем в эту карту добавляются 
+      два элемента: `"a": 1` и `"b": 2`. Функция `len()` возвращает количество элементов в карте.
+    - Ответ: 2
+
+    </details>
+
+  --- 
+
+  - Вопрос №2: [ Что выведет код? (Поиск в карте) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      m := map[string]int{
+      "a": 1,
+      "b": 2,
+      }
+      val, ok := m["c"]
+      fmt.Println(val, ok)
+    }
+
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Здесь создаётся карта `m` с двумя элементами. Потом происходит попытка получить значение по несуществующему ключу `"c"`. 
+      В Go, если ключа нет в карте, то будет возвращено нулевое значение для типа хранящихся в карте значений (в данном случае это 0 для типа int) 
+      и флаг ok, указывающий на существование ключа, будет равен false.
+    - Ответ: 0 false
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Что выведет код? (Удаление элемента) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      m := map[string]int{
+      "a": 1,
+      "b": 2,
+      }
+      delete(m, "a")
+      fmt.Println(len(m))
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      В этой задаче создаётся карта m с двумя элементами. Затем один из них удаляется с помощью функции delete(). 
+      Количество элементов после этого операции станет равным 1.
+    - Ответ: 1
+
+    </details>
+
+  --- 
+
+  - Вопрос №4: [ Что выведет код? (Изменение значения по ключу) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      m := map[string]int{
+      "a": 1,
+      }
+      m["a"] = 2
+      fmt.Println(m["a"])
+    }
+
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Пояснение: Задача демонстрирует, как можно изменить значение по уже существующему ключу в карте. Изначально в карте 
+      есть один элемент с ключом `"a"` и значением `1`. Затем это значение перезаписывается на `2`.
+    - Ответ: 2
+
+    </details>
+
+  --- 
+
+  - Вопрос №5: [ Что выведет код? (Ключи с нулевыми значениями) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      m := map[string]int{
+      "a": 0,
+      }
+      val, ok := m["a"]
+      fmt.Println(val, ok)
+    }
+
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Эта задача показывает, что в карте могут храниться ключи с нулевыми значениями. При попытке получить значение по ключу `"a"`
+      вернётся `0` и флаг `ok` будет равен `true`, указывая на то, что такой ключ действительно существует в карте. А если бы ключа не было, то
+      флаг `ok` был бы `false`
+    - Ответ: 0 true
+
+    </details>
+
+  --- 
+
+  </details>
+
 <!-- Слайсы и массивы -->
 - <details>
     <summary><h2><i>Слайсы и массивы</i></h2></summary>
 
   ---
   
-  - Вопрос №1: [ Что выведет код? (Изменение элементов слайса)]
+  - Вопрос №1: [ Что выведет код? (Изменение элементов слайса)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1848,7 +2032,7 @@ P.S.S.
   
   ---
 
-  - Вопрос №2: [ Что выведет код? (Изменение элементов массива)]
+  - Вопрос №2: [ Что выведет код? (Изменение элементов массива)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1880,7 +2064,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №3: [ Что выведет код? (Длина и емкость среза)]
+  - Вопрос №3: [ Что выведет код? (Длина и емкость среза)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1912,8 +2096,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №4: [ Что выведет код? (Срезы и make)]
-
+  - Вопрос №4: [ Что выведет код? (Срезы и make)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
     <details>
       <summary>Код</summary>
 
@@ -1946,7 +2129,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №5: [ Что выведет код? (Нулевой срез и nil)]
+  - Вопрос №5: [ Что выведет код? (Нулевой срез и nil)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1975,7 +2158,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №6: [ Что выведет код? (Изменение среза в функции)]
+  - Вопрос №6: [ Что выведет код? (Изменение среза в функции)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
