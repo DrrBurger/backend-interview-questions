@@ -9,8 +9,8 @@
 - И только если вы в полном ступоре открывайте ответ на вопрос.  
   
 - У практических задач рядом с вопросом будет стоять сложность:  ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
- ![Static Badge](https://img.shields.io/badge/Medium-yellow?color=yellow)
- ![Static Badge](https://img.shields.io/badge/Hard-red) 
+ ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+ ![Static Badge](https://img.shields.io/badge/Holy_Moly-red) 
 
 
 ---
