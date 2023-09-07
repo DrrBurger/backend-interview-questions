@@ -2224,16 +2224,41 @@ P.S.S.
 <details>
     <summary><h2><i>Практические задачи</i></h2></summary>
 
----
+<!-- Слайсы и массивы -->
+- <details>
+    <summary><h2><i>Слайсы и массивы</i></h2></summary>
 
-Вопрос №1: [ Soon ... ]
+  ---
+  
+  - Вопрос №1: [ Что выведет код? ]
 
-<details>
-  <summary>Ответ</summary>
+    <details>
+      <summary>Код</summary>
 
-</details>
+    ```go
+    package main
 
----
+    import "fmt"
+    
+    func main() {
+      a := []int{1, 2, 3}
+      b := a[:1]
+      b[0] = 5
+      fmt.Println(a[0], a[1])
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+    
+    - 5, 2
+    
+    </details>
+  
+  ---
+
+  </details>
 
 </details>
 
