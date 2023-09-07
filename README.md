@@ -1820,6 +1820,160 @@ P.S.S.
 <details>
     <summary><h2><i>Практические задачи Golang</i></h2></summary>
 
+<!-- Замыкание -->
+- <details>
+    <summary><h2><i>Замыкание</i></h2></summary>
+
+  ---
+
+  - Вопрос №1: [ Что выведет код? (Типичное замыкание) ] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      funcs := []func(){}
+      for i := 0; i < 3; i++ {
+        funcs = append(funcs, func() {
+            fmt.Println(i)
+        })
+      }
+      for _, f := range funcs {
+        f()
+      }
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Все функции в срезе `funcs` на самом деле "замыкают" одну и ту же переменную `i`, которая изменяется на каждой итерации 
+      основного цикла. К моменту выполнения второго цикла `for`, значение `i` становится равным `3` (так как индексы начинаются с `0`,
+      и цикл идет до момента, когда `i < 3`). Таким образом, при вызове каждой функции из среза `funcs`, будет выведено `3`.
+      Этот эффект часто называют "ловушкой замыкания в цикле", и он может быть источником путаницы или ошибок. 
+      Чтобы избежать этого, можно использовать локальную переменную внутри цикла или использовать "фабрику функций", 
+      как показано в одной из задач этой категории.
+    - Ответ: 3 3 3
+
+    </details>
+
+  --- 
+
+  - Вопрос №2: [ Что выведет код? (Замыкание и изменение переменной) ] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      x := 10
+      f := func() {
+        fmt.Println(x)
+      }
+      x += 10
+      f()
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      В этой задаче `f` является замыканием, которое замыкает переменную `x`. Когда значение `x` изменяется после объявления `f`, 
+      замыкание также "видит" это новое значение. Поэтому когда `f()` вызывается, оно выводит 20.
+    - Ответ: 20
+
+    </details>
+
+  --- 
+
+  - Вопрос №3: [ Что выведет код? (Фабрика функций) ] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func createClosure(i int) func() {
+      return func() {
+      fmt.Println(i)
+      }
+    }
+    
+    func main() {
+      closures := []func(){}
+      for i := 0; i < 3; i++ {
+        closures = append(closures, createClosure(i))
+      }
+      for _, closure := range closures {
+        closure()
+      }
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      В этом случае каждая функция создаётся с собственным значением i, поэтому замыкания выводят разные значения.
+    - Ответ: 0 1 2
+
+    </details>
+
+  --- 
+
+  - Вопрос №4: [ Что выведет код? (Замыкание и изменение состояния) ]  ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      sum := 0
+      adder := func(i int) {
+        sum += i
+      }
+      adder(10)
+      adder(20)
+      fmt.Println(sum)
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Здесь adder — это функция, которая изменяет внешнюю переменную sum. Каждый вызов adder(i) увеличивает sum на i. 
+      Таким образом, замыкание может использоваться для изменения и хранения состояния.
+    - Ответ: 30
+
+    </details>
+
+  --- 
+
+  </details>
+
 <!-- Map -->
 - <details>
     <summary><h2><i>Map</i></h2></summary>
