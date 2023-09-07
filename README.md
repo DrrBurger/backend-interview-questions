@@ -1826,7 +1826,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №1: [ Что выведет код? (Инициализация и добавление элементов) ] <kbd>easy-peasy</kbd>
+  - Вопрос №1: [ Что выведет код? (Инициализация и добавление элементов) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1857,7 +1857,7 @@ P.S.S.
 
   --- 
 
-  - Вопрос №2: [ Что выведет код? (Поиск в карте) ] <kbd>easy-peasy</kbd>
+  - Вопрос №2: [ Что выведет код? (Поиск в карте) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1892,7 +1892,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №3: [ Что выведет код? (Удаление элемента) ] <kbd>easy-peasy</kbd>
+  - Вопрос №3: [ Что выведет код? (Удаление элемента) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1925,7 +1925,7 @@ P.S.S.
 
   --- 
 
-  - Вопрос №4: [ Что выведет код? (Изменение значения по ключу) ] <kbd>easy-peasy</kbd>
+  - Вопрос №4: [ Что выведет код? (Изменение значения по ключу) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -1958,7 +1958,7 @@ P.S.S.
 
   --- 
 
-  - Вопрос №5: [ Что выведет код? (Ключи с нулевыми значениями) ] <kbd>easy-peasy</kbd>
+  - Вопрос №5: [ Что выведет код? (Ключи с нулевыми значениями) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -2000,7 +2000,7 @@ P.S.S.
 
   ---
   
-  - Вопрос №1: [ Что выведет код? (Изменение элементов слайса)] <kbd>easy-peasy</kbd>
+  - Вопрос №1: [ Что выведет код? (Изменение элементов слайса)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -2032,7 +2032,7 @@ P.S.S.
   
   ---
 
-  - Вопрос №2: [ Что выведет код? (Изменение элементов массива)] <kbd>easy-peasy</kbd>
+  - Вопрос №2: [ Что выведет код? (Изменение элементов массива)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -2064,7 +2064,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №3: [ Что выведет код? (Длина и емкость среза)] <kbd>easy-peasy</kbd>
+  - Вопрос №3: [ Что выведет код? (Длина и емкость среза)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -2096,8 +2096,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №4: [ Что выведет код? (Срезы и make)] <kbd>easy-peasy</kbd>
-
+  - Вопрос №4: [ Что выведет код? (Срезы и make)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
     <details>
       <summary>Код</summary>
 
@@ -2130,7 +2129,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №5: [ Что выведет код? (Нулевой срез и nil)] <kbd>easy-peasy</kbd>
+  - Вопрос №5: [ Что выведет код? (Нулевой срез и nil)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -2159,7 +2158,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №6: [ Что выведет код? (Изменение среза в функции)] <kbd>easy-peasy</kbd>
+  - Вопрос №6: [ Что выведет код? (Изменение среза в функции)] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
