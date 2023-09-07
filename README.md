@@ -9,6 +9,8 @@
 - И только если вы в полном ступоре открывайте ответ на вопрос.  
   
 - У практических задач рядом с вопросом будет стоять сложность ( <kbd>easy-peasy</kbd> <kbd>medium</kbd> <kbd>hard</kbd> )
+- ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
 
 ---
 
