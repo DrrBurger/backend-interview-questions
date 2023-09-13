@@ -2571,6 +2571,201 @@ P.S.S.
 
   </details>
 
+<!-- Указатели -->
+- <details>
+    <summary><h2><i>Указатели</i></h2></summary>
+
+  ---
+
+  - Вопрос №1: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+  
+    <details>
+      <summary>Код</summary>
+  
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      a := 5
+      b := &a
+      *b = 10
+      fmt.Println(a)
+    }
+    ```
+    </details>
+  
+    <details>
+      <summary>Ответ</summary>
+  
+    - Пояснение:
+      В этой задаче у нас есть переменная `a` со значением 5. Затем мы создаём указатель `b`, который указывает на переменную `a`. 
+      Изменяя значение по этому указателю на 10, мы изменяем и саму переменную `a`.
+    - Ответ: 10
+  
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func modify(x *int) {
+        *x += 5
+    }
+    
+    func main() {
+      a := 2
+      modify(&a)
+      fmt.Println(a)
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Здесь функция `modify` принимает указатель на `int` и добавляет к нему 5. В `main` мы передаём указатель на переменную `a` 
+      в эту функцию. По этой причине значение `a` становится равным 7 (2+5).
+    - Ответ: 7
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      a := 1
+      p1 := &a
+      p2 := &a
+      *p1 = 3
+      *p2 = 4
+      fmt.Println(a, *p1, *p2)
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      В этой задаче переменная `a` равна 1, и мы создаём два указателя (`p1` и `p2`), которые указывают на `a`. Затем мы меняем 
+      значение `a` через эти указатели. Последний указатель, который меняет значение, устанавливает его в 4.
+    - Ответ: 4 4 4
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Holy_Moly-red)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    type Node struct {
+      Value int
+      Next  *Node
+    }
+    
+    func reverse(head **Node) {
+      var prev *Node
+      current := *head
+      for current != nil {
+        next := current.Next
+        current.Next = prev
+        prev = current
+        current = next
+      }
+      *head = prev
+	}
+    
+    func main() {
+      third := &Node{3, nil}
+      second := &Node{2, third}
+      first := &Node{1, second}
+
+      reverse(&first)
+      fmt.Println(first.Value)
+      fmt.Println(first.Next.Value)
+      fmt.Println(first.Next.Next.Value)
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Эта задача демонстрирует обращение односвязного списка. Функция reverse изменяет направление ссылок в списках. 
+      Изначально список имеет вид 1->2->3. После обращения он становится 3->2->1.
+    - Ответ: 3 2 1
+
+    </details>
+
+  ---
+
+  - Вопрос №5: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Holy_Moly-red)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    func main() {
+      x := 0
+      y := 5
+
+      p := &x
+      pp := &p
+  
+      *(*(*(&pp)))++
+      y /= *p
+      fmt.Println(y)
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Эта задача демонстрирует использование указателей и двойных указателей в необычной манере. Изначально `x` равно 0, 
+      и `y` равно 5. В строке `*(*(*(&pp)))++`, `pp` является двойным указателем на `x`. Эта строчка увеличивает значение `x` на 1,
+      делая его равным 1. Затем `y` делится на `x`
+    - Ответ: 5
+
+    </details>
+
+  ---
+
+  </details>
+
 </details>
 
 <!-- Алгоритмы -->
