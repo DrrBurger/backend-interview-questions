@@ -3041,9 +3041,6 @@ P.S.S.
   - KMP Algorithm — алгоритм Кнута—Морриса—Пратта для поиска подстроки
   - Rabin-Karp Algorithm — алгоритм Рабина—Карпа для поиска подстроки
   - Z-Algorithm — для поиска подстроки
-  - Геометрические и топологические
-  - Convex Hull — построение выпуклой оболочки
-  - Line Intersection — пересечение линий
 * Структуры данных
   - Binary Trees, AVL Trees, Red-Black Trees — бинарные деревья, АВЛ-деревья, красно-черные деревья
   - Hashing Algorithms — алгоритмы хеширования
@@ -3377,9 +3374,205 @@ P.S.S.
   - <details>
     <summary>Binary Search</summary>
 
+    - SOON
+
     ```go
     ```
     </details>
+
+  ---
+
+  - <details>
+    <summary>Linear Search</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Depth-First Search (DFS)</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Breadth-First Search (BFS)</summary>
+  
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+- ДИНАМИЧЕСКОЕ ПРОГРАММИРОВАНИЕ
+
+  ---
+
+  - <details>
+    <summary>Fibonacci Series</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Knapsack Problem</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Longest Common Subsequence</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Coin Change Problem</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+- ГРАФЫ
+
+  ---
+
+  - <details>
+    <summary>Dijkstra's Algorithm</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Floyd-Warshall Algorithm</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Kruskal's Algorithm</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Prim's Algorithm</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+- СТРОКИ
+
+  ---
+
+  - <details>
+    <summary>KMP Algorithm</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Rabin-Karp Algorithm</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Z-Algorithm</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+- СТРУКТУРЫ ДАННЫХ
+
+  ---
+
+  - <details>
+    <summary>Binary Trees, AVL Trees, Red-Black Trees</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
+
+  - <details>
+    <summary>Hashing Algorithms</summary>
+
+    - SOON
+
+    ```go
+    ```
+    </details>
+
+  ---
   
 </details>
 
