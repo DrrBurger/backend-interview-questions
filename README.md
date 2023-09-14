@@ -3057,12 +3057,10 @@ P.S.S.
 <details>
   <summary>Реализации</summary>
 
-- СОРТИРОВКИ
-
   - <details>
     <summary>Quick Sort</summary>
   
-    * Quick Sort
+    - Quick Sort
       Сложность: O(n log n) в среднем и лучшем случае, O(n^2) в худшем случае.
       In-place: Да.
       Стабильность: Нет.
@@ -3122,7 +3120,7 @@ P.S.S.
   - <details>
     <summary>Merge Sort</summary>
 
-  * Merge Sort
+  - Merge Sort
     Сложность: O(n log n) во всех случаях.
     In-place: Нет (требует дополнительную память).
     Стабильность: Да.
@@ -3188,7 +3186,7 @@ P.S.S.
   - <details>
     <summary>Bubble Sort</summary>
 
-  * Bubble Sort
+  - Bubble Sort
     Сложность: O(n^2)
     In-place: Да.
     Стабильность: Да.
@@ -3238,7 +3236,7 @@ P.S.S.
   - <details>
     <summary>Insertion Sort</summary>
 
-  * Insertion Sort
+  - Insertion Sort
     Сложность: O(n^2)
     In-place: Да.
     Стабильность: Да.
@@ -3285,7 +3283,7 @@ P.S.S.
   - <details>
     <summary>Heap Sort</summary>
 
-  * Heap Sort
+  - Heap Sort
     Сложность: O(n log n)
     In-place: Да.
     Стабильность: Нет.
@@ -3350,8 +3348,6 @@ P.S.S.
     }
     ```
     </details>
-  
-- ПОИСК  
 
   - <details>
     <summary>Binary Search</summary>
