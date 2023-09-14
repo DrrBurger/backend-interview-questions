@@ -3059,6 +3059,10 @@ P.S.S.
 
   ---
 
+- СОРТИРОВКА
+
+  ---
+
   - <details>
     <summary>Quick Sort</summary>
   
@@ -3363,6 +3367,10 @@ P.S.S.
     }
     ```
     </details>
+
+  ---
+
+- ПОИСК
 
   ---
 
