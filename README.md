@@ -3057,8 +3057,19 @@ P.S.S.
 <details>
   <summary>Реализации</summary>
 
+- СОРТИРОВКИ
+
   - <details>
     <summary>Quick Sort</summary>
+  
+    * Quick Sort
+      Сложность: O(n log n) в среднем и лучшем случае, O(n^2) в худшем случае.
+      In-place: Да.
+      Стабильность: Нет.
+      Когда использовать:
+      Для больших наборов данных.
+      Когда требуется быстрая "in-place" сортировка.
+      Когда стабильность сортировки не является ключевым фактором.
     
     ```go
     package main
@@ -3067,47 +3078,288 @@ P.S.S.
     
     // quickSort сортирует подмассив arr[low:high] на месте.
     func quickSort(arr []int, low int, high int) {
-      // Если индекс "low" больше или равен "high", прекратить выполнение.
-      if low < high {
-        // Находим индекс опорного элемента
-        pivot := partition(arr, low, high)
-        // Рекурсивно сортируем подмассивы слева и справа от опорного элемента
-        quickSort(arr, low, pivot-1)
-        quickSort(arr, pivot+1, high)
-      }
+        // Если индекс "low" больше или равен "high", прекратить выполнение.
+        if low < high {
+            // Находим индекс опорного элемента
+            pivot := partition(arr, low, high)
+            // Рекурсивно сортируем подмассивы слева и справа от опорного элемента
+            quickSort(arr, low, pivot-1)
+            quickSort(arr, pivot+1, high)
+        }
 	}
     
     // partition выбирает опорный элемент и перераспределяет элементы так, чтобы
     // элементы меньше опорного находились слева, а больше — справа.
     func partition(arr []int, low int, high int) int {
-      // Используем последний элемент в качестве опорного
-      pivot := arr[high]
-      // Инициализируем i как индекс, указывающий на самый левый элемент
-      i := low - 1
-  
-      // Проходим через каждый элемент и сравниваем его с опорным
-      for j := low; j < high; j++ {
-          if arr[j] <= pivot {
-              i++
-              // Меняем местами arr[i] и arr[j]
-              arr[i], arr[j] = arr[j], arr[i]
-          }
-      }
-  
-      // Помещаем опорный элемент на правильную позицию
-      arr[i+1], arr[high] = arr[high], arr[i+1]
-      return i + 1
+        // Используем последний элемент в качестве опорного
+        pivot := arr[high]
+        // Инициализируем i как индекс, указывающий на самый левый элемент
+        i := low - 1
+    
+        // Проходим через каждый элемент и сравниваем его с опорным
+        for j := low; j < high; j++ {
+            if arr[j] <= pivot {
+                i++
+                // Меняем местами arr[i] и arr[j]
+                arr[i], arr[j] = arr[j], arr[i]
+            }
+        }
+    
+        // Помещаем опорный элемент на правильную позицию
+        arr[i+1], arr[high] = arr[high], arr[i+1]
+        return i + 1
     }
 
     func main() {
-      arr := []int{9, 7, 5, 11, 12, 2, 14, 3, 10, 6}
-      fmt.Println("Before sorting:", arr)
-      quickSort(arr, 0, len(arr)-1)
-      fmt.Println("After sorting:", arr)
+        arr := []int{9, 7, 5, 11, 12, 2, 14, 3, 10, 6}
+        fmt.Println("Before sorting:", arr)
+        quickSort(arr, 0, len(arr)-1)
+        fmt.Println("After sorting:", arr)
     }
     ```  
     </details>
 
+  - <details>
+    <summary>Merge Sort</summary>
+
+  * Merge Sort
+    Сложность: O(n log n) во всех случаях.
+    In-place: Нет (требует дополнительную память).
+    Стабильность: Да.
+    Когда использовать:
+    Для больших наборов данных.
+    Когда нужна стабильная сортировка.
+    Когда есть ограничения по памяти (например, во внешней сортировке).
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    // mergeSort рекурсивно разделяет и сортирует массив
+    func mergeSort(arr []int) []int {
+        // Если массив состоит из одного или нуля элементов, он уже отсортирован
+        if len(arr) <= 1 {
+          return arr
+        }
+
+	    // Разделяем массив на две половины
+	    middle := len(arr) / 2
+	    left := mergeSort(arr[:middle])
+	    right := mergeSort(arr[middle:])
+    
+	    // Сливаем отсортированные половины
+	    return merge(left, right)
+    }
+
+    // merge сливает два отсортированных массива в один отсортированный массив
+    func merge(left, right []int) []int {
+        // Инициализируем результат с предполагаемым размером для оптимизации
+        result := make([]int, 0, len(left)+len(right))
+    
+	    i, j := 0, 0
+	    // Проходим через каждый элемент в обоих массивах
+	    for i < len(left) && j < len(right) {
+	    	if left[i] <= right[j] {
+	    		result = append(result, left[i])
+	    		i++
+	    	} else {
+	    		result = append(result, right[j])
+	    		j++
+	    	}
+	    }
+
+	    // Добавляем оставшиеся элементы, если таковые есть
+	    result = append(result, left[i:]...)
+	    result = append(result, right[j:]...)
+    
+	    return result
+    }
+
+    func main() {
+        arr := []int{9, 7, 5, 11, 12, 2, 14, 3, 10, 6}
+        fmt.Println("Before sorting:", arr)
+        arr = mergeSort(arr)
+        fmt.Println("After sorting:", arr)
+    }
+    ```
+    </details>
+
+  - <details>
+    <summary>Bubble Sort</summary>
+
+  * Bubble Sort
+    Сложность: O(n^2)
+    In-place: Да.
+    Стабильность: Да.
+    Когда использовать:
+    Для очень небольших массивов.
+    Когда почти отсортированный массив нуждается в небольшой корректировке.
+    Обучающие задачи или простые приложения.
+
+    ```go
+    package main
+
+    import "fmt"
+    
+    // bubbleSort сортирует массив на месте, используя алгоритм пузырьковой сортировки.
+    func bubbleSort(arr []int) {
+        n := len(arr)
+    
+	    // Внешний цикл проходит по всему массиву
+	    for i := 0; i < n; i++ {
+	    	swapped := false // Флаг для оптимизации
+    
+	    	// Внутренний цикл сравнивает каждую пару соседних элементов
+	    	for j := 0; j < n-i-1; j++ {
+	    		if arr[j] > arr[j+1] {
+	    			// Меняем местами
+	    			arr[j], arr[j+1] = arr[j+1], arr[j]
+	    			swapped = true
+	    		}
+	    	}
+    
+	    	// Если не было обменов, массив уже отсортирован
+	    	if !swapped {
+	    		break
+	    	}
+	    }
+    }
+
+    func main() {
+        arr := []int{64, 34, 25, 12, 22, 11, 90}
+        fmt.Println("Before sorting:", arr)
+        bubbleSort(arr)
+        fmt.Println("After sorting:", arr)
+    }
+    ```
+    </details>
+
+  - <details>
+    <summary>Insertion Sort</summary>
+
+  * Insertion Sort
+    Сложность: O(n^2)
+    In-place: Да.
+    Стабильность: Да.
+    Когда использовать:
+    Для небольших массивов.
+    Для почти отсортированных массивов.
+    В алгоритмах, которые требуют сортировки на ходу.
+  
+    ```go
+    package main
+
+    import "fmt"
+
+    // insertionSort сортирует массив на месте, используя алгоритм сортировки вставками.
+    func insertionSort(arr []int) {
+        n := len(arr)
+    
+	    // Внешний цикл перебирает все элементы массива
+	    for i := 1; i < n; i++ {
+	    	key := arr[i]  // Текущий элемент для вставки
+	    	j := i - 1 // Индекс предыдущего элемента
+    
+	    	// Перемещаем все элементы, большие чем key, на одну позицию вперед
+	    	for j >= 0 && arr[j] > key {
+	    		arr[j+1] = arr[j]
+	    		j--
+	    	}
+    
+	    	// Вставляем key на правильное место
+	    	arr[j+1] = key
+	    }
+    }
+
+    func main() {
+        arr := []int{12, 11, 13, 5, 6}
+        fmt.Println("Before sorting:", arr)
+        insertionSort(arr)
+        fmt.Println("After sorting:", arr)
+    }
+
+    ```
+    </details>
+
+  - <details>
+    <summary>Heap Sort</summary>
+
+  * Heap Sort
+    Сложность: O(n log n)
+    In-place: Да.
+    Стабильность: Нет.
+    Когда использовать:
+    Когда требуется быстрая сортировка без дополнительного использования памяти.
+    Когда стабильность не требуется.
+  
+    ```go
+    package main
+
+    import "fmt"
+    
+    // heapify - функция для преобразования поддерева в двоичную кучу
+    // с корнем в индексе i для данного массива arr длины n
+    func heapify(arr []int, n int, i int) {
+        largest := i          // Инициализируем largest как корень
+        l := 2*i + 1          // Левый = 2*i + 1
+        r := 2*i + 2          // Правый = 2*i + 2
+    
+	    // Если левый дочерний элемент больше корня
+	    if l < n && arr[l] > arr[largest] {
+	    	largest = l
+	    }
+    
+	    // Если правый дочерний элемент больше корня
+	    if r < n && arr[r] > arr[largest] {
+	    	largest = r
+	    }
+    
+	    // Если largest не корень
+	    if largest != i {
+	    	arr[i], arr[largest] = arr[largest], arr[i]
+    
+	    	// Рекурсивно преобразуем в кучу поддерево с корнем в largest
+	    	heapify(arr, n, largest)
+	    }
+    }
+
+    // heapSort - функция для сортировки массива длины n
+    func heapSort(arr []int, n int) {
+        // Построение кучи (перегруппировка массива)
+        for i := n / 2 - 1; i >= 0; i-- {
+        heapify(arr, n, i)
+        }
+    
+	    // Один за другим извлекаем элементы из кучи
+	    for i := n - 1; i >= 0; i-- {
+	    	// Перемещаем текущий корень в конец
+	    	arr[0], arr[i] = arr[i], arr[0]
+    
+	    	// Вызываем heapify на уменьшенной куче
+	    	heapify(arr, i, 0)
+	    }
+    }
+
+    func main() {
+        arr := []int{12, 11, 13, 5, 6, 7}
+        n := len(arr)
+	    fmt.Println("Before sorting:", arr)
+	    heapSort(arr, n)
+	    fmt.Println("After sorting:", arr)
+    }
+    ```
+    </details>
+  
+- ПОИСК  
+
+  - <details>
+    <summary>Binary Search</summary>
+
+    ```go
+    ```
+    </details>
+  
 </details>
 
 ---
