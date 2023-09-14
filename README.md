@@ -2041,6 +2041,243 @@ P.S.S.
 <details>
     <summary><h2><i>Практические задачи Golang</i></h2></summary>
 
+<!-- Горутины -->
+- <details>
+    <summary><h2><i>Горутины</i></h2></summary>
+
+  ---
+
+  - Вопрос №1: [ Что выведет код? (Горутины без синхронизации) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import (
+      "fmt"
+      "time"
+    )
+    
+    func main() {
+      for i := 0; i < 3; i++ {
+        go func(i int) {
+            fmt.Println(i)
+        }(i)
+      }
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Так как мы запускаем горутины без примитивов синхронизации то функция main выполнится быстрее чем горутины не дожидаясь 
+      их выполнения.
+    - Ответ: ничего не выведется
+
+    </details>
+
+  ---
+
+  - Вопрос №2: [ Что выведет код? (Захват переменной) ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import (
+      "fmt"
+      "time"
+    )
+    
+    func main() {
+      for i := 0; i < 3; i++ {
+        go func() {
+            fmt.Println(i)
+        }()
+      }
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Здесь мы не передает значение `i` аргументом в горутину. Все горутины захватывают переменную цикла. На момент запуска горутин она 
+      уже будет равна 3 и все три горутины будут работать с ней.
+    - Ответ: 3 3 3
+
+    </details>
+
+  ---
+
+  - Вопрос №3: [ Что выведет код? (Select case) ] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import (
+      "fmt"
+      "time"
+    )
+    
+    func main() {
+      ch := make(chan int)
+  
+      go func() {
+          ch <- 1
+          time.Sleep(100 * time.Millisecond)
+          ch <- 2
+      }()
+  
+      select {
+      case v := <-ch:
+          fmt.Println(v)
+      case <-time.After(50 * time.Millisecond):
+          fmt.Println("Timeout")
+      }
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      В этом коде используется оператор select, который ожидает первый завершившийся канал из списка и выполняет соответствующий ему блок кода.
+      После этого select завершает свою работу. Он не ожидает, пока все каналы завершат свою работу или отправят значения.
+    - Ответ: 1
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Что выведет код? (Deadlock или нет) ] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import (
+      "fmt"
+    )
+    
+    func main() {
+      ch := make(chan int, 1)
+      go func() {
+        for i := 0; i < 2; i++ {
+          select {
+          case ch <- i:
+          }
+        }
+        close(ch)
+      }()
+
+      for i := range ch {
+        fmt.Println(i)
+	    }
+    }
+
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Создается канал ch с буфером размером 1.
+      Горутина начинает с отправки значения 0 в канал. Канал может хранить одно значение, так что это значение успешно отправляется.
+      Затем она пытается отправить значение 1. Но канал уже полон (в нем уже есть значение 0), так что горутина блокируется, ожидая, пока канал освободится.
+      Затем цикл `for i := range ch` начинает читать из канала. Как только он читает значение 0, канал освободится.
+      Теперь гоуртина она может отправить значение 1 в канал, так как он теперь пуст.
+      В цикле продолжает читать из канала и читает значение 1.
+      Горутина закрывает канал `ch`.
+      Выходим из цикла for i := range ch, так как канал был закрыт.
+    - Ответ: 0 1
+
+    </details>
+
+  ---
+
+  - Вопрос №4: [ Что выведет код? (Горутины и каналы) ] ![Static Badge](https://img.shields.io/badge/Holy_Moly-red)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import (
+      "fmt"
+      "time"
+    )
+    
+    func main() {
+      ch1 := make(chan int)
+      ch2 := make(chan int)
+      ch3 := make(chan int)
+  
+      go func() {
+          for i := 0; i < 3; i++ {
+              ch1 <- i
+              time.Sleep(100 * time.Millisecond)
+          }
+          close(ch1)
+      }()
+  
+      go func() {
+          for i := 3; i < 6; i++ {
+              ch2 <- i
+          }
+          close(ch2)
+      }()
+  
+      go func() {
+          for val := range ch1 {
+              ch3 <- val
+          }
+          for val := range ch2 {
+              ch3 <- val
+          }
+          close(ch3)
+      }()
+  
+      for val := range ch3 {
+          fmt.Println(val)
+      }
+    }
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      Первая горутина добавляет элементы в `ch1` с задержкой, что дает второй горутине время на то, 
+      чтобы полностью заполнить `ch2` до того, как первая горутина закроет `ch1`.
+      Третья горутина начнет с чтения из `ch1` и будет ждать, пока первая горутина закроет `ch1`. 
+      Затем она начнет читать из `ch2`. К моменту, когда третья горутина начнет читать из `ch2`, вторая горутина уже 
+      закроет `ch2`, и все значения будут прочитаны и добавлены в `ch3`. Главная горутина читает значения из `ch3` в 
+      том порядке, в каком они были добавлены. Сначала это будут значения из `ch1` (0, 1, 2), а затем из `ch2` (3, 4, 5).
+    - Ответ: 0 1 2 3 4 5
+
+    </details>
+
+  ---
+
+  </details>
+
 <!-- Замыкание -->
 - <details>
     <summary><h2><i>Замыкание</i></h2></summary>
