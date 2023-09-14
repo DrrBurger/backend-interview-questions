@@ -2096,11 +2096,12 @@ P.S.S.
     )
     
     func main() {
-      for i := 0; i < 3; i++ {
-        go func() {
-            fmt.Println(i)
-        }()
-      }
+        for i := 0; i < 3; i++ {
+          go func() {
+              fmt.Println(i)
+          }()
+        }
+	    time.Sleep(100 * time.Millisecond)
     }
     ```
     </details>
