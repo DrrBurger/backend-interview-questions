@@ -3011,45 +3011,7 @@ P.S.S.
 
 ---
 
-Вопрос №1: [ Какие часто используемые алгоритмы ты знаешь? ]
-
-<details>
-  <summary>Ответ</summary>
-
-* Сортировка
-  - Quick Sort — быстрая сортировка
-  - Merge Sort — сортировка слиянием
-  - Bubble Sort — сортировка пузырьком
-  - Insertion Sort — сортировка вставками
-  - Heap Sort — сортировка кучей
-* Поиск
-  - Binary Search — двоичный поиск
-  - Linear Search — линейный поиск
-  - Depth-First Search (DFS) — поиск в глубину
-  - Breadth-First Search (BFS) — поиск в ширину
-* Динамическое программирование
-  - Fibonacci Series — вычисление чисел Фибоначчи
-  - Knapsack Problem — задача о рюкзаке
-  - Longest Common Subsequence — наибольшая общая подпоследовательность
-  - Coin Change Problem — задача о размене монет
-* Графы
-  - Dijkstra's Algorithm — алгоритм Дейкстры для нахождения кратчайшего пути
-  - Floyd-Warshall Algorithm — алгоритм Флойда—Уоршелла
-  - Kruskal's Algorithm — алгоритм Краскала для минимального остовного дерева
-  - Prim's Algorithm — алгоритм Прима для минимального остовного дерева
-* Строки
-  - KMP Algorithm — алгоритм Кнута—Морриса—Пратта для поиска подстроки
-  - Rabin-Karp Algorithm — алгоритм Рабина—Карпа для поиска подстроки
-  - Z-Algorithm — для поиска подстроки
-* Структуры данных
-  - Binary Trees, AVL Trees, Red-Black Trees — бинарные деревья, АВЛ-деревья, красно-черные деревья
-  - Hashing Algorithms — алгоритмы хеширования
-
-</details>
-
----
-
-Реализации: [ Реализации перечисленных выше алгоритмов на языке Go ]
+Реализации: [ Реализации алгоритмов на языке Go (смотреть при необходимости) ]
 
 <details>
   <summary>Реализации</summary>
@@ -3574,6 +3536,44 @@ P.S.S.
 
   ---
   
+</details>
+
+---
+
+Вопрос №1: [ Какие часто используемые алгоритмы ты знаешь? ]
+
+<details>
+  <summary>Ответ</summary>
+
+* Сортировка
+  - Quick Sort — быстрая сортировка
+  - Merge Sort — сортировка слиянием
+  - Bubble Sort — сортировка пузырьком
+  - Insertion Sort — сортировка вставками
+  - Heap Sort — сортировка кучей
+* Поиск
+  - Binary Search — двоичный поиск
+  - Linear Search — линейный поиск
+  - Depth-First Search (DFS) — поиск в глубину
+  - Breadth-First Search (BFS) — поиск в ширину
+* Динамическое программирование
+  - Fibonacci Series — вычисление чисел Фибоначчи
+  - Knapsack Problem — задача о рюкзаке
+  - Longest Common Subsequence — наибольшая общая подпоследовательность
+  - Coin Change Problem — задача о размене монет
+* Графы
+  - Dijkstra's Algorithm — алгоритм Дейкстры для нахождения кратчайшего пути
+  - Floyd-Warshall Algorithm — алгоритм Флойда—Уоршелла
+  - Kruskal's Algorithm — алгоритм Краскала для минимального остовного дерева
+  - Prim's Algorithm — алгоритм Прима для минимального остовного дерева
+* Строки
+  - KMP Algorithm — алгоритм Кнута—Морриса—Пратта для поиска подстроки
+  - Rabin-Karp Algorithm — алгоритм Рабина—Карпа для поиска подстроки
+  - Z-Algorithm — для поиска подстроки
+* Структуры данных
+  - Binary Trees, AVL Trees, Red-Black Trees — бинарные деревья, АВЛ-деревья, красно-черные деревья
+  - Hashing Algorithms — алгоритмы хеширования
+
 </details>
 
 ---
