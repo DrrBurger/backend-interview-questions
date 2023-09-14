@@ -3011,7 +3011,108 @@ P.S.S.
 
 ---
 
-Вопрос №1: [ Как отсортировать файл на 100GB с 1GB ОЗУ? ]
+Вопрос №1: [ Какие часто используемые алгоритмы ты знаешь? ]
+
+<details>
+  <summary>Ответ</summary>
+
+* Сортировка
+  - Quick Sort — быстрая сортировка
+  - Merge Sort — сортировка слиянием
+  - Bubble Sort — сортировка пузырьком
+  - Insertion Sort — сортировка вставками
+  - Heap Sort — сортировка кучей
+* Поиск
+  - Binary Search — двоичный поиск
+  - Linear Search — линейный поиск
+  - Depth-First Search (DFS) — поиск в глубину
+  - Breadth-First Search (BFS) — поиск в ширину
+* Динамическое программирование
+  - Fibonacci Series — вычисление чисел Фибоначчи
+  - Knapsack Problem — задача о рюкзаке
+  - Longest Common Subsequence — наибольшая общая подпоследовательность
+  - Coin Change Problem — задача о размене монет
+* Графы
+  - Dijkstra's Algorithm — алгоритм Дейкстры для нахождения кратчайшего пути
+  - Floyd-Warshall Algorithm — алгоритм Флойда—Уоршелла
+  - Kruskal's Algorithm — алгоритм Краскала для минимального остовного дерева
+  - Prim's Algorithm — алгоритм Прима для минимального остовного дерева
+* Строки
+  - KMP Algorithm — алгоритм Кнута—Морриса—Пратта для поиска подстроки
+  - Rabin-Karp Algorithm — алгоритм Рабина—Карпа для поиска подстроки
+  - Z-Algorithm — для поиска подстроки
+  - Геометрические и топологические
+  - Convex Hull — построение выпуклой оболочки
+  - Line Intersection — пересечение линий
+* Структуры данных
+  - Binary Trees, AVL Trees, Red-Black Trees — бинарные деревья, АВЛ-деревья, красно-черные деревья
+  - Hashing Algorithms — алгоритмы хеширования
+
+</details>
+
+---
+
+Реализации: [ Реализации перечисленных выше алгоритмов на языке Go ]
+
+<details>
+  <summary>Реализации</summary>
+
+  - <details>
+    <summary>Quick Sort</summary>
+    
+    ```go
+    package main
+
+    import "fmt"
+    
+    // quickSort сортирует подмассив arr[low:high] на месте.
+    func quickSort(arr []int, low int, high int) {
+      // Если индекс "low" больше или равен "high", прекратить выполнение.
+      if low < high {
+        // Находим индекс опорного элемента
+        pivot := partition(arr, low, high)
+        // Рекурсивно сортируем подмассивы слева и справа от опорного элемента
+        quickSort(arr, low, pivot-1)
+        quickSort(arr, pivot+1, high)
+      }
+	}
+    
+    // partition выбирает опорный элемент и перераспределяет элементы так, чтобы
+    // элементы меньше опорного находились слева, а больше — справа.
+    func partition(arr []int, low int, high int) int {
+      // Используем последний элемент в качестве опорного
+      pivot := arr[high]
+      // Инициализируем i как индекс, указывающий на самый левый элемент
+      i := low - 1
+  
+      // Проходим через каждый элемент и сравниваем его с опорным
+      for j := low; j < high; j++ {
+          if arr[j] <= pivot {
+              i++
+              // Меняем местами arr[i] и arr[j]
+              arr[i], arr[j] = arr[j], arr[i]
+          }
+      }
+  
+      // Помещаем опорный элемент на правильную позицию
+      arr[i+1], arr[high] = arr[high], arr[i+1]
+      return i + 1
+    }
+
+    func main() {
+      arr := []int{9, 7, 5, 11, 12, 2, 14, 3, 10, 6}
+      fmt.Println("Before sorting:", arr)
+      quickSort(arr, 0, len(arr)-1)
+      fmt.Println("After sorting:", arr)
+    }
+    ```  
+    </details>
+
+</details>
+
+---
+
+Вопрос №2: [ Как отсортировать файл на 100GB с 1GB ОЗУ? ]
 
 <details>
   <summary>Ответ</summary>
