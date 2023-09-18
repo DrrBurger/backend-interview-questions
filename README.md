@@ -3337,9 +3337,51 @@ P.S.S.
   - <details>
     <summary>Binary Search</summary>
 
-    - SOON
+    - Binary Search (Бинарный поиск)  
+      Сложность: O(log n) в среднем и лучшем случае, где n - размер массива, O(1) в худшем случае (когда элемент не найден).
+      In-place: Да.
+      Стабильность: Нет.
+
+    - Когда использовать:
+      Когда массив упорядочен и требуется найти элемент.
+      При работе с большими отсортированными данными, где бинарный поиск эффективнее линейного поиска.
 
     ```go
+    package main
+
+    import "fmt"
+    
+    // binarySearch выполняет бинарный поиск элемента в упорядоченном массиве.
+    func binarySearch(arr []int, target int) int {
+        low, high := 0, len(arr)-1
+
+	    for low <= high {
+	    	mid := low + (high-low)/2 // Находим средний индекс
+    
+	    	if arr[mid] == target {
+	    		return mid // Найден элемент, возвращаем его индекс
+	    	} else if arr[mid] < target {
+	    		low = mid + 1 // Искомый элемент находится в правой половине
+	    	} else {
+	    		high = mid - 1 // Искомый элемент находится в левой половине
+	    	}
+	    }
+    
+	    return -1 // Элемент не найден
+    }
+
+    func main() {
+        arr := []int{2, 4, 6, 8, 10, 12, 14, 16}
+        target := 10
+        index := binarySearch(arr, target)
+    
+	    if index != -1 {
+	    	fmt.Printf("%d found at index %d\n", target, index)
+	    } else {
+	    	fmt.Printf("%d not found in the array\n", target)
+	    }
+    }
+
     ```
     </details>
 
@@ -3348,9 +3390,43 @@ P.S.S.
   - <details>
     <summary>Linear Search</summary>
 
-    - SOON
+    - Linear Search (Линейный поиск)
+      Сложность: O(n) в среднем, лучшем и худшем случае, где n - размер массива.
+      In-place: Да.
+      Стабильность: Нет
+
+    - Когда использовать:
+      Когда массив небольшой или не упорядочен.
+      Для поиска элемента в небольших наборах данных.
+      Когда другие алгоритмы не применимы или неэффективны из-за малого размера данных.
 
     ```go
+    package main
+
+    import "fmt"
+    
+    // linearSearch выполняет линейный поиск элемента в массиве.
+    func linearSearch(arr []int, target int) int {
+        for i, num := range arr {
+            if num == target {
+                return i // Найден элемент, возвращаем его индекс
+            }
+        }
+        return -1 // Элемент не найден
+    }
+    
+    func main() {
+        arr := []int{2, 4, 6, 8, 10, 12, 14, 16}
+        target := 10
+        index := linearSearch(arr, target)
+    
+	    if index != -1 {
+	    	fmt.Printf("%d found at index %d\n", target, index)
+	    } else {
+	    	fmt.Printf("%d not found in the array\n", target)
+	    }
+    }
+
     ```
     </details>
 
@@ -3359,9 +3435,53 @@ P.S.S.
   - <details>
     <summary>Depth-First Search (DFS)</summary>
 
-    - SOON
+    - Depth-First Search (DFS поиск в глубину)
+      Сложность: O(V + E), где V - количество вершин, E - количество рёбер.
+      In-place: Нет.
+      Стабильность: Нет.
+
+    - Когда использовать:
+      Для обхода графов в глубину и поиска путей в графах.
+      Когда нужно исследовать все возможные варианты обхода в глубину, например, в алгоритмах поиска в ширину или поиска путей.
 
     ```go
+    package main
+
+    import (
+    "fmt"
+    )
+    
+    // Graph: представляет собой граф в виде карты, где ключ - это вершина, а значение - это список смежных вершин.
+    type Graph map[int][]int
+    
+    // DFS: обходит граф в глубину начиная с вершины start.
+    func DFS(graph Graph, start int, visited map[int]bool) {
+        // Отмечаем текущую вершину как посещенную
+        visited[start] = true
+        fmt.Println(start)
+    
+	    // Перебираем всех соседей текущей вершины
+	    for _, neighbor := range graph[start] {
+	    	if !visited[neighbor] { // Если сосед не был посещен
+	    		DFS(graph, neighbor, visited) // Рекурсивно вызываем DFS для соседа
+	    	}
+	    }
+    }
+
+    func main() {
+        graph := Graph{
+        0: {1, 2},
+        1: {2},
+        2: {0, 3},
+        3: {3},
+        }
+
+	    visited := make(map[int]bool)
+    
+	    fmt.Println("Depth-First Search:")
+	    DFS(graph, 2, visited)
+    }
+
     ```
     </details>
 
@@ -3370,9 +3490,69 @@ P.S.S.
   - <details>
     <summary>Breadth-First Search (BFS)</summary>
   
-    - SOON
+    - Breadth-First Search (BFS поиск в ширину)
+      Сложность: O(V + E), где V - количество вершин, E - количество рёбер.
+      In-place: Нет.
+      Стабильность: Нет.
+
+    - Когда использовать:
+      Для поиска кратчайшего пути в графе.
+      Когда нужно исследовать все соседние вершины на текущем уровне графа (например, в задачах поиска кратчайшего пути).
+      Когда нужен полный обход графа в ширину.
 
     ```go
+    package main
+
+    import (
+        "fmt"
+        "container/list"
+    )
+    
+    // Graph представляет собой граф в виде карты, где ключ - это вершина, а значение - это список смежных вершин.
+    type Graph map[int][]int
+    
+    // BFS обходит граф в ширину начиная с вершины start.
+    func BFS(graph Graph, start int) {
+        // Создаем очередь и добавляем в нее стартовую вершину
+        queue := list.New()
+        queue.PushBack(start)
+    
+	    // Инициализируем множество посещенных вершин
+	    visited := make(map[int]bool)
+	    visited[start] = true
+    
+	    fmt.Println("Breadth-First Search:")
+    
+	    for queue.Len() > 0 {
+	    	// Извлекаем вершину из начала очереди
+	    	element := queue.Front()
+	    	vertex := element.Value.(int)
+	    	queue.Remove(element)
+    
+	    	fmt.Println(vertex)
+    
+	    	// Добавляем все непосещенные соседние вершины в очередь
+	    	for _, neighbor := range graph[vertex] {
+	    		if !visited[neighbor] {
+	    			queue.PushBack(neighbor)
+	    			visited[neighbor] = true
+	    		}
+	    	}
+	    }
+    }
+
+    func main() {
+        graph := Graph{
+        0: {1, 2},
+        1: {2},
+        2: {0, 3},
+        3: {3},
+        }
+    
+    	fmt.Println("Breadth-First Search:")
+    	BFS(graph, 2)
+    }
+
     ```
     </details>
 
