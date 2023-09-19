@@ -2888,7 +2888,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №1: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+  - Вопрос №1: [ Что выведет код? ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
   
     <details>
       <summary>Код</summary>
@@ -2919,7 +2919,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №2: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+  - Вопрос №2: [ Что выведет код? ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
 
     <details>
       <summary>Код</summary>
@@ -2953,7 +2953,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №3: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
+  - Вопрос №3: [ Что выведет код? ] ![Static Badge](https://img.shields.io/badge/Wow-yellow?color=yellow)
 
     <details>
       <summary>Код</summary>
@@ -2986,7 +2986,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №4: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Holy_Moly-red)
+  - Вопрос №4: [ Что выведет код? ] ![Static Badge](https://img.shields.io/badge/Holy_Moly-red)
 
     <details>
       <summary>Код</summary>
@@ -2997,31 +2997,31 @@ P.S.S.
     import "fmt"
     
     type Node struct {
-      Value int
-      Next  *Node
+        Value int
+        Next  *Node
     }
     
     func reverse(head **Node) {
-      var prev *Node
-      current := *head
-      for current != nil {
-        next := current.Next
-        current.Next = prev
-        prev = current
-        current = next
-      }
-      *head = prev
+        var prev *Node
+        current := *head
+        for current != nil {
+            next := current.Next
+            current.Next = prev
+            prev = current
+            current = next
+        }
+        *head = prev
 	}
     
     func main() {
-      third := &Node{3, nil}
-      second := &Node{2, third}
-      first := &Node{1, second}
-
-      reverse(&first)
-      fmt.Println(first.Value)
-      fmt.Println(first.Next.Value)
-      fmt.Println(first.Next.Next.Value)
+        third := &Node{3, nil}
+        second := &Node{2, third}
+        first := &Node{1, second}
+  
+        reverse(&first)
+        fmt.Println(first.Value)
+        fmt.Println(first.Next.Value)
+        fmt.Println(first.Next.Next.Value)
     }
     ```
     </details>
@@ -3038,7 +3038,7 @@ P.S.S.
 
   ---
 
-  - Вопрос №5: [ Что выведет код?] ![Static Badge](https://img.shields.io/badge/Holy_Moly-red)
+  - Вопрос №5: [ Что выведет код? ] ![Static Badge](https://img.shields.io/badge/Holy_Moly-red)
 
     <details>
       <summary>Код</summary>
@@ -3070,6 +3070,96 @@ P.S.S.
       и `y` равно 5. В строке `*(*(*(&pp)))++`, `pp` является двойным указателем на `x`. Эта строчка увеличивает значение `x` на 1,
       делая его равным 1. Затем `y` делится на `x`
     - Ответ: 5
+
+    </details>
+
+  ---
+
+  - Вопрос №6: [ Что выведет код? ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```go
+    package main
+
+    import (
+        "fmt"
+        "unsafe"
+    )
+    
+    type st struct {
+        p1 bool
+        p2 int
+        p3 bool
+    }
+    
+    func main() {
+        myStr := st{}
+    
+	    fmt.Println(unsafe.Sizeof(myStr)) // 1?
+    
+	    fmt.Println(myStr) // 2?
+    
+	    mutatePtr1(&myStr)
+    
+	    fmt.Println(myStr) // 4?
+    
+	    mutatePtr2(&myStr)
+    
+	    fmt.Println(myStr) // 6?
+
+    }
+
+    func mutatePtr1(in *st) {
+        in = &st{
+            p1: true,
+            p2: 666,
+            p3: false,
+        }
+
+	    fmt.Println("in mutatePtr1", in) // 3?
+    }
+
+    func mutatePtr2(in *st) {
+        *in = st{
+            p1: false,
+            p2: 8841,
+            p3: true,
+        }
+    
+    	fmt.Println("in mutatePtr2", in) // 5?
+    }
+
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+      `fmt.Println(unsafe.Sizeof(myStr)) // 1?`
+      Выводит размер структуры `myStr` в байтах. Это значение зависит от реализации и архитектуры системы, но обычно это 16 байтов 
+      (1 байт для каждого `bool` и 8 байтов для `int`, плюс дополнительные байты для выравнивания).
+      `fmt.Println(myStr) // 2?`
+      Выводит нулевые значения полей структуры (`false` для `bool`, 0 для `int`).
+      `mutatePtr1(&myStr)`
+      Вызывается функция `mutatePtr1`, которая принимает указатель на структуру и создает новый экземпляр этой структуры. 
+      Однако это не меняет оригинальную структуру, поскольку указатель `in` внутри функции `mutatePtr1` теперь указывает на новую структуру.
+      `fmt.Println(myStr) // 4?`
+      Показывает, что оригинальная структура `myStr` не изменилась, так как `mutatePtr1` не меняет ее.
+      `mutatePtr2(&myStr)`
+      Вызывается функция `mutatePtr2`, которая принимает указатель на структуру и меняет поля этой структуры. 
+      В этом случае изменения затрагивают оригинальную структуру myStr.
+      `fmt.Println(myStr) // 6?`
+      Показывает, что оригинальная структура `myStr` изменилась, так как `mutatePtr2` изменил ее.
+    - Ответ:
+      1) 24
+      2) {false 0 false}
+      3) in mutatePtr1 &{true 666 false}
+      4) {false 0 false}
+      5) in mutatePtr2 &{false 8841 true}
+      6) {false 8841 true}
 
     </details>
 
