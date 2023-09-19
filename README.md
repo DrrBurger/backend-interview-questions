@@ -3137,7 +3137,7 @@ P.S.S.
     <details>
       <summary>Ответ</summary>
 
-    - Пояснение:
+    - Пояснение:  
       `fmt.Println(unsafe.Sizeof(myStr)) // 1?`  
       Выводит размер структуры `myStr` в байтах. Это значение зависит от реализации и архитектуры системы, но обычно это 16 байтов 
       (1 байт для каждого `bool` и 8 байтов для `int`, плюс дополнительные байты для выравнивания).  
@@ -3154,12 +3154,12 @@ P.S.S.
       `fmt.Println(myStr) // 6?`  
       Показывает, что оригинальная структура `myStr` изменилась, так как `mutatePtr2` изменил ее.  
     - Ответ:
-      1) 24
-      2) {false 0 false}
-      3) in mutatePtr1 &{true 666 false}
-      4) {false 0 false}
-      5) in mutatePtr2 &{false 8841 true}
-      6) {false 8841 true}
+      24
+      {false 0 false}
+      in mutatePtr1 &{true 666 false}
+      {false 0 false}
+      in mutatePtr2 &{false 8841 true}
+      {false 8841 true}
 
     </details>
 
