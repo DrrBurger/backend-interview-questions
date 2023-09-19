@@ -3154,12 +3154,12 @@ P.S.S.
       `fmt.Println(myStr) // 6?`  
       Показывает, что оригинальная структура `myStr` изменилась, так как `mutatePtr2` изменил ее.  
     - Ответ:
-      24
-      {false 0 false}
-      in mutatePtr1 &{true 666 false}
-      {false 0 false}
-      in mutatePtr2 &{false 8841 true}
-      {false 8841 true}
+      24  
+      {false 0 false}\
+      in mutatePtr1 &{true 666 false}\
+      {false 0 false}\
+      in mutatePtr2 &{false 8841 true}\
+      {false 8841 true}\
 
     </details>
 
