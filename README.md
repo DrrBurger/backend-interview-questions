@@ -46,7 +46,7 @@ P.S.S.
 
 <!-- ОБЩЕЕ -->
 <details>
-    <summary><b><i>Общее</i></b></summary>
+    <summary><b><i>Общие вопросы</i></b></summary>
 
 ---
 
@@ -766,6 +766,8 @@ P.S.S.
 <!-- Golang -->
 <details>
     <summary><b><i>Golang</i></b></summary>
+
+---
 
 <!-- Общие вопросы по языку Go -->
 - <details>
@@ -2168,15 +2170,19 @@ P.S.S.
 
   </details>
 
+---
+
 </details>
 
 <!-- Практические задачи -->
 <details>
     <summary><b><i>Практические задачи Golang</i></b></summary>
 
+---
+
 <!-- Горутины -->
 - <details>
-    <summary><h2><i>Горутины</i></h2></summary>
+    <summary><b><i>Горутины</i></b></summary>
 
   ---
 
@@ -2414,7 +2420,7 @@ P.S.S.
 
 <!-- Замыкание -->
 - <details>
-    <summary><h2><i>Замыкание</i></h2></summary>
+    <summary><b><i>Замыкание</i></b></summary>
 
   ---
 
@@ -2568,7 +2574,7 @@ P.S.S.
 
 <!-- Map -->
 - <details>
-    <summary><h2><i>Map</i></h2></summary>
+    <summary><b><i>Map</i></b></summary>
 
   ---
 
@@ -2742,7 +2748,7 @@ P.S.S.
 
 <!-- Слайсы и массивы -->
 - <details>
-    <summary><h2><i>Слайсы и массивы</i></h2></summary>
+    <summary><b><i>Слайсы и массивы</i></b></summary>
 
   ---
   
@@ -2944,7 +2950,7 @@ P.S.S.
 
 <!-- Указатели -->
 - <details>
-    <summary><h2><i>Указатели</i></h2></summary>
+    <summary><b><i>Указатели</i></b></summary>
 
   ---
 
@@ -3226,6 +3232,8 @@ P.S.S.
   ---
 
   </details>
+
+---
 
 </details>
 
@@ -4164,6 +4172,8 @@ P.S.S.
 <details>
     <summary><b><i>DevOps</i></b></summary>
 
+---
+
 <!-- Управление конфигурацией -->
 - <details>
     <summary><b><i>Управление конфигурацией</i></b></summary>
@@ -4721,6 +4731,8 @@ P.S.S.
   ---
 
   </details>
+
+---
 
 </details>
 
