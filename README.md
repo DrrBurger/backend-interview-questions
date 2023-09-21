@@ -37,7 +37,7 @@ P.S.S.
 
 ---
 <p align="center">
-  <img src="https://github.com/DrrBurger/Photos_for_git/blob/master/1_3UreHEOa70zgNwE3JeFoHQ.webp" alt="logo">
+  <img src="https://github.com/DrrBurger/Photos_for_git/blob/master/Untitled-1.png" alt="logo">
 </p>
 
 ---
