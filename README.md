@@ -767,6 +767,8 @@ P.S.S.
 <details>
     <summary><b><i>Golang</i></b></summary>
 
+---
+
 <!-- Общие вопросы по языку Go -->
 - <details>
     <summary><b><i>Общие вопросы по языку Go</i></b></summary>
@@ -2173,6 +2175,8 @@ P.S.S.
 <!-- Практические задачи -->
 <details>
     <summary><b><i>Практические задачи Golang</i></b></summary>
+
+---
 
 <!-- Горутины -->
 - <details>
