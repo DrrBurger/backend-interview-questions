@@ -788,8 +788,6 @@ P.S.S.
 - <details>
     <summary>Сортировка</summary>
 
----
-
   - <details>
     <summary>Quick Sort</summary>
   
