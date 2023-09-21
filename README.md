@@ -788,8 +788,6 @@ P.S.S.
 - <details>
     <summary>Сортировка</summary>
 
-  ---
-
   - <details>
     <summary>Quick Sort</summary>
   
@@ -1096,8 +1094,6 @@ P.S.S.
     </details>
   </details>  
 
-  ---
-
 <!-- Поиск -->
 - <details>
     <summary>Поиск</summary>
@@ -1327,8 +1323,6 @@ P.S.S.
     </details>
   </details> 
 
-  ---
-
 <!-- Динамическое программирование -->
 - <details>
     <summary>Динамическое программирование</summary>
@@ -1539,8 +1533,6 @@ P.S.S.
     ```
     </details>
   </details>
-  
-  ---
 
 <!-- Графы -->
 - <details>
@@ -1591,8 +1583,6 @@ P.S.S.
     </details>
   </details>  
 
-  ---
-
 <!-- Строки -->
 - <details>
     <summary>Строки</summary>
@@ -1630,8 +1620,6 @@ P.S.S.
     ```
     </details>
   </details>
-  
-  ---
 
 <!-- Структуры данных -->
 - <details>
@@ -1659,9 +1647,7 @@ P.S.S.
     ```
     </details>
   </details>
-  
-  ---
-  
+
 </details>
 
 ---
