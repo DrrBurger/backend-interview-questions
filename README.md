@@ -46,7 +46,7 @@ P.S.S.
 
 <!-- ОБЩЕЕ -->
 <details>
-    <summary><h2><i>Общее</i></h2></summary>
+  <summary><h2><i>Общее</i></h2></summary>
 
 ---
 
