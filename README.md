@@ -786,7 +786,7 @@ P.S.S.
 
 <!-- Сортировка -->
 - <details>
-    <summary>СОРТИРОВКА</summary>
+    <summary>Сортировка</summary>
 
   ---
 
@@ -1593,6 +1593,7 @@ P.S.S.
 
   ---
 
+<!-- Строки -->
 - <details>
     <summary>Строки</summary>
 
@@ -1632,6 +1633,7 @@ P.S.S.
   
   ---
 
+<!-- Структуры данных -->
 - <details>
     <summary>Структуры данных</summary>
 
