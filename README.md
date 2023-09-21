@@ -2170,6 +2170,8 @@ P.S.S.
 
   </details>
 
+---
+
 </details>
 
 <!-- Практические задачи -->
@@ -3231,6 +3233,8 @@ P.S.S.
 
   </details>
 
+---
+
 </details>
 
 <!-- Алгоритмы -->
@@ -4168,6 +4172,8 @@ P.S.S.
 <details>
     <summary><b><i>DevOps</i></b></summary>
 
+---
+
 <!-- Управление конфигурацией -->
 - <details>
     <summary><b><i>Управление конфигурацией</i></b></summary>
@@ -4725,6 +4731,8 @@ P.S.S.
   ---
 
   </details>
+
+---
 
 </details>
 
