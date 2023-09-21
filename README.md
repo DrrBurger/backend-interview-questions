@@ -2498,7 +2498,7 @@ P.S.S.
 
 <!-- Golang -->
 <details>
-    <summary><b><i>Golang</i></b></summary>
+    <summary><b><i>Теория Golang</i></b></summary>
 
 ---
 
@@ -4972,7 +4972,7 @@ P.S.S.
 
 <!-- Python -->
 <details>
-    <summary><b><i>Python</i></b></summary>
+    <summary><b><i>Теория Python</i></b></summary>
 
 ---
 
@@ -5001,7 +5001,7 @@ P.S.S.
 
 <!-- Практические задачи Python-->
 <details>
-    <summary><b><i>Практические задачи Golang</i></b></summary>
+    <summary><b><i>Практические задачи Python</i></b></summary>
 
 ---
 
