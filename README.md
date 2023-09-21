@@ -784,7 +784,9 @@ P.S.S.
 
   ---
 
-- СОРТИРОВКА
+<!-- Сортировка -->
+- <details>
+    <summary>СОРТИРОВКА</summary>
 
   ---
 
@@ -1092,10 +1094,13 @@ P.S.S.
     }
     ```
     </details>
+  </details>  
 
   ---
 
-- ПОИСК
+<!-- Поиск -->
+- <details>
+    <summary>Поиск</summary>
 
   ---
 
@@ -1320,10 +1325,13 @@ P.S.S.
 
     ```
     </details>
+  </details> 
 
   ---
 
-- ДИНАМИЧЕСКОЕ ПРОГРАММИРОВАНИЕ
+<!-- Динамическое программирование -->
+- <details>
+    <summary>Динамическое программирование</summary>
 
   ---
 
@@ -1530,10 +1538,13 @@ P.S.S.
     }
     ```
     </details>
-
+  </details>
+  
   ---
 
-- ГРАФЫ
+<!-- Графы -->
+- <details>
+    <summary>Графы</summary>
 
   ---
 
@@ -1578,10 +1589,12 @@ P.S.S.
     ```go
     ```
     </details>
+  </details>  
 
   ---
 
-- СТРОКИ
+- <details>
+    <summary>Строки</summary>
 
   ---
 
@@ -1615,10 +1628,12 @@ P.S.S.
     ```go
     ```
     </details>
-
+  </details>
+  
   ---
 
-- СТРУКТУРЫ ДАННЫХ
+- <details>
+    <summary>Структуры данных</summary>
 
   ---
 
@@ -1641,7 +1656,8 @@ P.S.S.
     ```go
     ```
     </details>
-
+  </details>
+  
   ---
   
 </details>
