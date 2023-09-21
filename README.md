@@ -7,7 +7,6 @@
 - На данный момент репозиторий содержит:
   - Теоретические вопросы: 164
   - Практические задачи: 25
-- Для раскрытия категории/вопроса/ответа нажмите на треугольник слева от категории/вопроса/ответа
 - Настоятельно рекомендую, прежде чем открывать ответ на вопрос попробовать ответить на него самостоятельно.  
 - Если ответить не получается, попробуйте выдумать ответ основываясь на уже имеющихся у вас знаниях.  
 - И только если вы в полном ступоре открывайте ответ на вопрос.  
@@ -47,7 +46,7 @@ P.S.S.
 
 <!-- ОБЩЕЕ -->
 <details>
-    <summary><h2><i>Общее</i></h2></summary>
+    <summary><b><i>Общее</i></b></summary>
 
 ---
 
@@ -251,7 +250,7 @@ P.S.S.
 
 <!-- Сеть и всё что с ней связано -->
 <details>
-    <summary><h2><i>Сеть и всё что с ней связано</i></h2></summary>
+    <summary><b><i>Сеть и всё что с ней связано</i></b></summary>
 
 ---
 
@@ -433,7 +432,7 @@ P.S.S.
 
 <!-- Операционная система -->
 <details>
-    <summary><h2><i>Операционная система</i></h2></summary>
+    <summary><b><i>Операционная система</i></b></summary>
 
 ---
 
@@ -564,7 +563,7 @@ P.S.S.
 
 <!-- Базы данных -->
 <details>
-    <summary><h2><i>Базы данных</i></h2></summary>
+    <summary><b><i>Базы данных</i></b></summary>
 
 ---
 
@@ -766,11 +765,11 @@ P.S.S.
 
 <!-- Golang -->
 <details>
-    <summary><h2><i>Golang</i></h2></summary>
+    <summary><b><i>Golang</i></b></summary>
 
 <!-- Общие вопросы по языку Go -->
 - <details>
-    <summary><h3><i>Общие вопросы по языку Go</i></h3></summary>
+    <summary><b><i>Общие вопросы по языку Go</i></b></summary>
 
   ---
 
@@ -1140,7 +1139,7 @@ P.S.S.
 
 <!-- Численные типы -->
 - <details>
-    <summary><h3><i>Численные типы</i></h3></summary>
+    <summary><b><i>Численные типы</i></b></summary>
 
   ---
 
@@ -1190,7 +1189,7 @@ P.S.S.
 
 <!-- Строки -->
 - <details>
-    <summary><h3><i>Строки</i></h3></summary>
+    <summary><b><i>Строки</i></b></summary>
 
   ---
 
@@ -1234,7 +1233,7 @@ P.S.S.
 
 <!-- Интерфейсы -->
 - <details>
-    <summary><h3><i>Интерфейсы</i></h3></summary>
+    <summary><b><i>Интерфейсы</i></b></summary>
 
   ---
 
@@ -1395,7 +1394,7 @@ P.S.S.
 
 <!-- Массивы и слайсы -->
 - <details>
-    <summary><h3><i>Массивы и слайсы</i></h3></summary>
+    <summary><b><i>Массивы и слайсы</i></b></summary>
 
   ---
 
@@ -1459,7 +1458,7 @@ P.S.S.
 
 <!-- Map -->
 - <details>
-    <summary><h3><i>Map</i></h3></summary>
+    <summary><b><i>Map</i></b></summary>
 
   ---
 
@@ -1546,7 +1545,7 @@ P.S.S.
 
 <!-- Defer -->
 - <details>
-    <summary><h3><i>Defer</i></h3></summary>
+    <summary><b><i>Defer</i></b></summary>
 
   ---
 
@@ -1594,7 +1593,7 @@ P.S.S.
 
 <!-- Горутины -->
 - <details>
-    <summary><h3><i>Горутины</i></h3></summary>
+    <summary><b><i>Горутины</i></b></summary>
 
   ---
 
@@ -1728,7 +1727,7 @@ P.S.S.
 
 <!-- Примитивы синхронизации -->
 - <details>
-    <summary><h3><i>Примитивы синхронизации</i></h3></summary>
+    <summary><b><i>Примитивы синхронизации</i></b></summary>
 
   ---
 
@@ -1910,7 +1909,7 @@ P.S.S.
 
 <!-- Switch/Select/Case -->
 - <details>
-    <summary><h3><i>Switch/Select/Case</i></h3></summary>
+    <summary><b><i>Switch/Select/Case</i></b></summary>
 
   ---
 
@@ -1943,7 +1942,7 @@ P.S.S.
 
 <!-- Context -->
 - <details>
-    <summary><h3><i>Context</i></h3></summary>
+    <summary><b><i>Context</i></b></summary>
 
   ---
 
@@ -2035,7 +2034,7 @@ P.S.S.
 
 <!-- Garbage Collector -->
 - <details>
-    <summary><h3><i>Garbage Collector</i></h3></summary>
+    <summary><b><i>Garbage Collector</i></b></summary>
 
   ---
 
@@ -2103,7 +2102,7 @@ P.S.S.
 
 <!-- ООП в Golang -->
 - <details>
-    <summary><h3><i>ООП в Golang</i></h3></summary>
+    <summary><b><i>ООП в Golang</i></b></summary>
 
   ---
 
@@ -2135,7 +2134,7 @@ P.S.S.
 
 <!-- Ошибки и паники Golang -->
 - <details>
-    <summary><h3><i>Ошибки и паники Golang</i></h3></summary>
+    <summary><b><i>Ошибки и паники Golang</i></b></summary>
 
   ---
 
@@ -2173,7 +2172,7 @@ P.S.S.
 
 <!-- Практические задачи -->
 <details>
-    <summary><h2><i>Практические задачи Golang</i></h2></summary>
+    <summary><b><i>Практические задачи Golang</i></b></summary>
 
 <!-- Горутины -->
 - <details>
@@ -3232,7 +3231,7 @@ P.S.S.
 
 <!-- Алгоритмы -->
 <details>
-    <summary><h2><i>Алгоритмы</i></h2></summary>
+    <summary><b><i>Алгоритмы</i></b></summary>
 
 ---
 
@@ -4163,11 +4162,11 @@ P.S.S.
 
 <!-- DevOps -->
 <details>
-    <summary><h2><i>DevOps</i></h2></summary>
+    <summary><b><i>DevOps</i></b></summary>
 
 <!-- Управление конфигурацией -->
 - <details>
-    <summary><h3><i>Управление конфигурацией</i></h3></summary>
+    <summary><b><i>Управление конфигурацией</i></b></summary>
 
   ---
 
@@ -4266,7 +4265,7 @@ P.S.S.
 
 <!-- Контейнеризация и оркестрация -->
 - <details>
-    <summary><h3><i>Контейнеризация и оркестрация</i></h3></summary>
+    <summary><b><i>Контейнеризация и оркестрация</i></b></summary>
 
   ---
 
@@ -4411,7 +4410,7 @@ P.S.S.
 
 <!-- CI/CD (Непрерывная интеграция и непрерывная доставка: -->
 - <details>
-    <summary><h3><i>CI/CD (Непрерывная интеграция и непрерывная доставка)</i></h3></summary>
+    <summary><b><i>CI/CD (Непрерывная интеграция и непрерывная доставка)</i></b></summary>
 
   ---
 
@@ -4522,7 +4521,7 @@ P.S.S.
 
 <!-- Мониторинг и логирование -->
 - <details>
-    <summary><h3><i>Мониторинг и логирование</i></h3></summary>
+    <summary><b><i>Мониторинг и логирование</i></b></summary>
 
   ---
 
@@ -4579,7 +4578,7 @@ P.S.S.
 
 <!-- Облачные сервисы -->
 - <details>
-    <summary><h3><i>Облачные сервисы</i></h3></summary>
+    <summary><b><i>Облачные сервисы</i></b></summary>
 
   ---
 
@@ -4641,7 +4640,7 @@ P.S.S.
 
 <!-- Среды виртуализации и управление облачной инфраструктурой -->
 - <details>
-    <summary><h3><i>Среды виртуализации и управление облачной инфраструктурой</i></h3></summary>
+    <summary><b><i>Среды виртуализации и управление облачной инфраструктурой</i></b></summary>
 
   ---
 
@@ -4676,7 +4675,7 @@ P.S.S.
 
 <!-- Сетевые и безопасные инструменты -->
 - <details>
-    <summary><h3><i>Сетевые и безопасные инструменты</i></h3></summary>
+    <summary><b><i>Сетевые и безопасные инструменты</i></b></summary>
 
   ---
 
@@ -4727,7 +4726,7 @@ P.S.S.
 
 <!-- Принципы и методологии программирования -->
 <details>
-    <summary><h2><i>Принципы и методологии</i></h2></summary>
+    <summary><b><i>Принципы и методологии</i></b></summary>
 
 ---
 
@@ -4802,7 +4801,7 @@ P.S.S.
 
 <!-- GIT -->
 <details>
-    <summary><h2><i>GIT</i></h2></summary>
+    <summary><b><i>GIT</i></b></summary>
 
 ---
 
