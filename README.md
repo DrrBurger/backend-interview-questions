@@ -787,6 +787,8 @@ P.S.S.
 <!-- Сортировка -->
 - <details>
     <summary>Сортировка</summary>
+  
+  ---
 
   - <details>
     <summary>Quick Sort</summary>
@@ -848,8 +850,7 @@ P.S.S.
     }
     ```  
     </details>
-
-  ---
+  
 
   - <details>
     <summary>Merge Sort</summary>
@@ -918,7 +919,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Bubble Sort</summary>
@@ -971,7 +971,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Insertion Sort</summary>
@@ -1021,7 +1020,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Heap Sort</summary>
@@ -1150,8 +1148,7 @@ P.S.S.
 
     ```
     </details>
-
-  ---
+  
 
   - <details>
     <summary>Linear Search</summary>
@@ -1196,7 +1193,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Depth-First Search (DFS)</summary>
@@ -1251,7 +1247,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Breadth-First Search (BFS)</summary>
@@ -1365,8 +1360,7 @@ P.S.S.
     }
     ```
     </details>
-
-  ---
+  
 
   - <details>
     <summary>Knapsack Problem</summary>
@@ -1421,7 +1415,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Longest Common Subsequence</summary>
@@ -1476,7 +1469,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Coin Change Problem</summary>
@@ -1548,8 +1540,7 @@ P.S.S.
     ```go
     ```
     </details>
-
-  ---
+  
 
   - <details>
     <summary>Floyd-Warshall Algorithm</summary>
@@ -1560,7 +1551,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Kruskal's Algorithm</summary>
@@ -1571,7 +1561,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Prim's Algorithm</summary>
@@ -1597,8 +1586,7 @@ P.S.S.
     ```go
     ```
     </details>
-
-  ---
+  
 
   - <details>
     <summary>Rabin-Karp Algorithm</summary>
@@ -1609,7 +1597,6 @@ P.S.S.
     ```
     </details>
 
-  ---
 
   - <details>
     <summary>Z-Algorithm</summary>
@@ -1635,8 +1622,7 @@ P.S.S.
     ```go
     ```
     </details>
-
-  ---
+  
 
   - <details>
     <summary>Hashing Algorithms</summary>
