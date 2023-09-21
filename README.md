@@ -851,6 +851,8 @@ P.S.S.
     ```  
     </details>
 
+  ---
+
   - <details>
     <summary>Merge Sort</summary>
 
@@ -918,6 +920,8 @@ P.S.S.
     ```
     </details>
 
+  ---
+
   - <details>
     <summary>Bubble Sort</summary>
 
@@ -969,6 +973,8 @@ P.S.S.
     ```
     </details>
 
+  ---
+
   - <details>
     <summary>Insertion Sort</summary>
 
@@ -1016,6 +1022,8 @@ P.S.S.
 
     ```
     </details>
+
+  ---
 
   - <details>
     <summary>Heap Sort</summary>
