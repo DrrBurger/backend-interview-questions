@@ -2498,7 +2498,7 @@ P.S.S.
 
 <!-- Golang -->
 <details>
-    <summary><b><i>Теория Golang</i></b></summary>
+    <summary><b><i>Golang</i></b></summary>
 
 ---
 
@@ -4970,9 +4970,11 @@ P.S.S.
 
 </details>
 
+---
+
 <!-- Python -->
 <details>
-    <summary><b><i>Теория Python</i></b></summary>
+    <summary><b><i>Python</i></b></summary>
 
 ---
 
