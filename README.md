@@ -558,6 +558,7 @@ P.S.S.
 </details>
 
 ---
+
 </details>
 
 <!-- Базы данных -->
@@ -3787,9 +3788,37 @@ P.S.S.
   - <details>
     <summary>Fibonacci Series</summary>
 
-    - SOON
+    - Сложность: O(n) в среднем, лучшем и худшем случае.
+      In-place: Да (использует дополнительное пространство размером O(n)).
+      Стабильность: Не применимо.
+    
+    - Когда использовать: Когда требуется вычислить n-ое число Фибоначчи.
 
     ```go
+    package main
+
+    import "fmt"
+    
+    // fibonacci использует динамическое программирование для вычисления n-го числа Фибоначчи
+    func fibonacci(n int) int {
+        // Если n равно 0 или 1, возвращаем само число
+        if n <= 1 {
+            return n
+        }
+        // Инициализация слайса для сохранения чисел Фибоначчи
+        fib := make([]int, n+1)
+        fib[1] = 1
+        // Вычисляем числа Фибоначчи начиная с 2 до n
+        for i := 2; i <= n; i++ {
+            fib[i] = fib[i-1] + fib[i-2]
+        }
+        return fib[n]
+    }
+    
+    func main() {
+        n := 10 // Можно изменить на любое желаемое число
+        fmt.Println(fibonacci(n))
+    }
     ```
     </details>
 
@@ -3798,9 +3827,53 @@ P.S.S.
   - <details>
     <summary>Knapsack Problem</summary>
 
-    - SOON
+    - Сложность: O(nW) в среднем, лучшем и худшем случае, где n - количество предметов, а W - вместимость рюкзака.
+      In-place: Нет.
+      Стабильность: Не применимо.
+    
+    - Когда использовать: Когда требуется определить максимальное значение, которое можно получить, размещая предметы с ограниченной вместимостью в рюкзаке.
 
     ```go
+    package main
+
+    import "fmt"
+    
+    // Вспомогательная функция для получения максимального значения
+    func max(a, b int) int {
+        if a > b {
+            return a
+        }
+        return b
+    }
+    
+    // 0-1 knapsack problem решение задачи о рюкзаке
+    func knapsack(values, weights []int, capacity int) int {
+        n := len(values)
+        // Инициализация двумерного слайса для динамического программирования
+        dp := make([][]int, n+1)
+        for i := range dp {
+            dp[i] = make([]int, capacity+1)
+        }
+    
+        // Заполнение таблицы dp
+        for i := 1; i <= n; i++ {
+            for w := 1; w <= capacity; w++ {
+                if weights[i-1] <= w {
+                    dp[i][w] = max(dp[i-1][w], values[i-1]+dp[i-1][w-weights[i-1]])
+                } else {
+                    dp[i][w] = dp[i-1][w]
+                }
+            }
+        }
+        return dp[n][capacity]
+    }
+
+    func main() {
+        values := []int{60, 100, 120}  // Значения предметов
+        weights := []int{10, 20, 30}  // Веса предметов
+        capacity := 50                // Вместимость рюкзака
+        fmt.Println(knapsack(values, weights, capacity))
+    }
     ```
     </details>
 
@@ -3809,9 +3882,53 @@ P.S.S.
   - <details>
     <summary>Longest Common Subsequence</summary>
 
-    - SOON
+    - Сложность: O(mn) в среднем, лучшем и худшем случае, где m и n - длины двух строк.
+      In-place: Нет.
+      Стабильность: Не применимо.
+    
+    - Когда использовать: Когда нужно определить наибольшую общую подпоследовательность между двумя строками.
 
     ```go
+    package main
+
+    import "fmt"
+    
+    // Вспомогательная функция для получения максимального значения
+    func max(a, b int) int {
+        if a > b {
+            return a
+        }
+        return b
+    }
+    
+    // lcs находит наибольшую общую подпоследовательность двух строк
+    func lcs(X, Y string) int {
+        m := len(X)
+        n := len(Y)
+        // Инициализация двумерного слайса для динамического программирования
+        dp := make([][]int, m+1)
+        for i := range dp {
+            dp[i] = make([]int, n+1)
+        }
+    
+        // Заполнение таблицы dp
+        for i := 1; i <= m; i++ {
+            for j := 1; j <= n; j++ {
+                if X[i-1] == Y[j-1] {
+                    dp[i][j] = dp[i-1][j-1] + 1
+                } else {
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+                }
+            }
+        }
+        return dp[m][n]
+    }
+    
+    func main() {
+        str1 := "AGGTAB"
+        str2 := "GXTXAYB"
+        fmt.Println(lcs(str1, str2))
+    }
     ```
     </details>
 
@@ -3820,9 +3937,55 @@ P.S.S.
   - <details>
     <summary>Coin Change Problem</summary>
 
-    - SOON
+    - Сложность: O(amount * n) в среднем, лучшем и худшем случае, где n - количество различных монет.
+      In-place: Да (использует дополнительное пространство размером O(amount)).
+      Стабильность: Не применимо.
+    
+    - Когда использовать: Когда нужно определить минимальное количество монет, которые необходимо использовать, чтобы собрать заданную сумму.
 
     ```go
+    package main
+
+    import (
+        "fmt"
+        "math"
+    )
+    
+    // coinChange решает задачу о размене монет
+    func coinChange(coins []int, amount int) int {
+        // Инициализация слайса для динамического программирования
+        dp := make([]int, amount+1)
+        for i := range dp {
+            dp[i] = math.MaxInt32
+        }
+        dp[0] = 0
+    
+        // Заполнение таблицы dp
+        for _, coin := range coins {
+            for i := coin; i <= amount; i++ {
+                dp[i] = min(dp[i], dp[i-coin]+1)
+            }
+        }
+    
+        if dp[amount] == math.MaxInt32 {
+            return -1
+        }
+        return dp[amount]
+    }
+
+    // Вспомогательная функция для получения минимального значения
+    func min(a, b int) int {
+        if a < b {
+            return a
+        }
+        return b
+    }
+    
+    func main() {
+        coins := []int{1, 2, 5}
+        amount := 11
+        fmt.Println(coinChange(coins, amount))
+    }
     ```
     </details>
 
