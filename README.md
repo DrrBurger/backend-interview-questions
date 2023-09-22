@@ -5328,3 +5328,271 @@ P.S.S.
   </details>
 
 </details>
+
+---
+
+<!-- JavaScript -->
+<details>
+    <summary><b><i>JavaScript</i></b></summary>
+
+---
+
+<!-- Общие вопросы по языку JavaScript -->
+- <details>
+    <summary><b><i>Общие вопросы по языку JavaScript</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    *
+
+    </details>
+
+  ---
+
+  </details>
+
+---
+
+</details>
+
+<!-- Практические задачи JavaScript-->
+<details>
+    <summary><b><i>Практические задачи JavaScript</i></b></summary>
+
+---
+
+<!-- Soon -->
+- <details>
+    <summary><b><i>Soon</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```javascript
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+
+    - Ответ:
+
+    </details>
+
+  ---
+
+  </details>
+
+</details>
+
+---
+
+<!-- Java -->
+<details>
+    <summary><b><i>Java</i></b></summary>
+
+---
+
+<!-- Общие вопросы по языку Java -->
+- <details>
+    <summary><b><i>Общие вопросы по языку Java</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    *
+
+    </details>
+
+  ---
+
+  </details>
+
+---
+
+</details>
+
+<!-- Практические задачи Java-->
+<details>
+    <summary><b><i>Практические задачи Java</i></b></summary>
+
+---
+
+<!-- Soon -->
+- <details>
+    <summary><b><i>Soon</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```java
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+
+    - Ответ:
+
+    </details>
+
+  ---
+
+  </details>
+
+</details>
+
+---
+
+<!-- C# -->
+<details>
+    <summary><b><i>C#</i></b></summary>
+
+---
+
+<!-- Общие вопросы по языку C# -->
+- <details>
+    <summary><b><i>Общие вопросы по языку C#</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    *
+
+    </details>
+
+  ---
+
+  </details>
+
+---
+
+</details>
+
+<!-- Практические задачи C#-->
+<details>
+    <summary><b><i>Практические задачи C#</i></b></summary>
+
+---
+
+<!-- Soon -->
+- <details>
+    <summary><b><i>Soon</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```C#
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+
+    - Ответ:
+
+    </details>
+
+  ---
+
+  </details>
+
+</details>
+
+---
+
+<!-- C++ -->
+<details>
+    <summary><b><i>C++</i></b></summary>
+
+---
+
+<!-- Общие вопросы по языку C++ -->
+- <details>
+    <summary><b><i>Общие вопросы по языку C++</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ]
+
+    <details>
+      <summary>Ответ</summary>
+
+    *
+
+    </details>
+
+  ---
+
+  </details>
+
+---
+
+</details>
+
+<!-- Практические задачи C++-->
+<details>
+    <summary><b><i>Практические задачи C++</i></b></summary>
+
+---
+
+<!-- Soon -->
+- <details>
+    <summary><b><i>Soon</i></b></summary>
+
+  ---
+
+  - Вопрос №1: [ Soon ] ![Static Badge](https://img.shields.io/badge/Easy_peasy-brightgreen)
+
+    <details>
+      <summary>Код</summary>
+
+    ```C++
+    ```
+    </details>
+
+    <details>
+      <summary>Ответ</summary>
+
+    - Пояснение:
+
+    - Ответ:
+
+    </details>
+
+  ---
+
+  </details>
+
+</details>
