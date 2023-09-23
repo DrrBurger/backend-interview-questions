@@ -1872,9 +1872,78 @@ P.S.S.
   - <details>
     <summary>KMP Algorithm</summary>
 
-    - SOON
+    - Сложность:  
+      В среднем: O(n+m)  
+      Лучший случай: O(n) (если подстрока отсутствует)  
+      Худший случай: O(n+m)  
+      In-place: Да  
+      Стабильность: Не применимо (это алгоритм поиска)  
+    - Когда использовать: Когда нужен быстрый поиск подстроки в строке.
 
     ```go
+    package main
+
+    import (
+        "fmt"
+    )
+    
+    // Функция для вычисления префикс-функции для KMP
+    func computeLPSArray(pattern string) []int {
+        length := 0
+        lps := make([]int, len(pattern))
+    
+    	i := 1
+    	// Проход по всей строке для вычисления lps[i]
+    	for i < len(pattern) {
+    		if pattern[i] == pattern[length] {
+    			length++
+    			lps[i] = length
+    			i++
+    		} else {
+    			if length != 0 {
+    				// Найдено несовпадение, следует уменьшить length
+    				length = lps[length-1]
+    			} else {
+    				lps[i] = 0
+    				i++
+    			}
+    		}
+    	}
+    	return lps
+    }
+    
+    // Функция KMP поиска
+    func KMPSearch(pat, txt string) {
+        m := len(pat)
+        n := len(txt)
+        lps := computeLPSArray(pat)
+    
+    	i, j := 0, 0
+    	// Проход по главной строке
+    	for i < n {
+    		if pat[j] == txt[i] {
+    			i++
+    			j++
+    		}
+    		// Если найдено полное совпадение
+    		if j == m {
+    			fmt.Printf("Найден шаблон на индексе %d\n", i-j)
+    			j = lps[j-1]
+    		} else if i < n && pat[j] != txt[i] {
+    			if j != 0 {
+    				j = lps[j-1]
+    			} else {
+    				i++
+    			}
+    		}
+    	}
+    }
+    
+    func main() {
+        txt := "ABABDABACDABABCABAB"
+        pat := "ABABCABAB"
+        KMPSearch(pat, txt)
+    }
     ```
     </details>
   
@@ -1882,9 +1951,75 @@ P.S.S.
   - <details>
     <summary>Rabin-Karp Algorithm</summary>
 
-    - SOON
+    - Сложность:  
+      В среднем: O(n+m)  
+      Лучший случай: O(n+m)  
+      Худший случай: O(nm) при плохом хеше  
+      In-place: Да  
+      Стабильность: Не применимо (это алгоритм поиска)  
+    - Когда использовать: Когда нужен алгоритм на основе хеширования для поиска подстроки.
 
     ```go
+    package main
+
+    import (
+        "fmt"
+    )
+    
+    const base = 256 // основание для хеширования
+    const prime = 101 // простое число для модуляции хеша
+    
+    // Функция поиска с использованием Rabin-Karp
+    func rabinKarpSearch(pat, txt string) {
+        m := len(pat)
+        n := len(txt)
+        i, j := 0, 0
+        pHash, tHash := 0, 0
+        h := 1
+    
+    	// Вычисление h^(m-1) для последующего использования
+    	for i = 0; i < m-1; i++ {
+    		h = (h * base) % prime
+    	}
+    
+    	// Вычисление хешей для pat и первого окна txt
+    	for i = 0; i < m; i++ {
+    		pHash = (base*pHash + int(pat[i])) % prime
+    		tHash = (base*tHash + int(txt[i])) % prime
+    	}
+    
+    	// Скользящее окно по тексту txt
+    	for i = 0; i <= n-m; i++ {
+    		// Сравнение хешей текущего окна txt и pat
+    		if pHash == tHash {
+    			// При совпадении хешей сравниваем символы
+    			for j = 0; j < m; j++ {
+    				if txt[i+j] != pat[j] {
+    					break
+    				}
+    			}
+    			// Если pat[0...m-1] = txt[i, i+1, ...i+m-1]
+    			if j == m {
+    				fmt.Printf("Найден шаблон на индексе %d\n", i)
+    			}
+    		}
+    
+    		// Вычисление хеша для следующего окна txt
+    		if i < n-m {
+    			tHash = (base*(tHash-int(txt[i])*h) + int(txt[i+m])) % prime
+    			if tHash < 0 {
+    				tHash += prime
+    			}
+    		}
+    	}
+    }
+
+    func main() {
+        txt := "ABABDABACDABABCABAB"
+        pat := "ABABCABAB"
+        rabinKarpSearch(pat, txt)
+    }
+
     ```
     </details>
 
@@ -1892,9 +2027,73 @@ P.S.S.
   - <details>
     <summary>Z-Algorithm</summary>
 
-    - SOON
+    - Сложность:  
+      В среднем: O(n+m)  
+      Лучший случай: O(n+m)  
+      Худший случай: O(n+m)  
+      In-place: Да  
+      Стабильность: Не применимо (это алгоритм поиска)  
+    - Когда использовать: Когда нужен алгоритм для поиска подстроки, основанный на Z-массиве.
 
     ```go
+    package main
+
+    import (
+        "fmt"
+    )
+    
+    // Функция для вычисления Z-массива
+    func getZArray(str string) []int {
+        n := len(str)
+        z := make([]int, n)
+    
+    	l, r, k := 0, 0, 0
+    	for i := 1; i < n; i++ {
+    		// Если i находится за пределами текущего Z-окна, вычисляем Z[i] "с нуля"
+    		if i > r {
+    			l, r = i, i
+    			for r < n && str[r-l] == str[r] {
+    				r++
+    			}
+    			z[i] = r - l
+    			r--
+    		} else {
+    			// Иначе применяем оптимизацию к вычислению Z[i]
+    			k = i - l
+    			if z[k] < r-i+1 {
+    				z[i] = z[k]
+    			} else {
+    				l = i
+    				for r < n && str[r-l] == str[r] {
+    					r++
+    				}
+    				z[i] = r - l
+    				r--
+    			}
+    		}
+    	}
+    	return z
+    }
+    
+    // Функция для поиска с использованием Z-алгоритма
+    func zSearch(text, pattern string) {
+        // Конкатенация текста и паттерна
+        concat := pattern + "$" + text
+        z := getZArray(concat)
+        // Обход полученного Z-массива
+        for i := 0; i < len(z); i++ {
+            // Если значение z[i] равно длине паттерна, значит, паттерн найден на этой позиции
+            if z[i] == len(pattern) {
+                fmt.Printf("Найден шаблон на индексе %d\n", i-len(pattern)-1)
+            }
+        }
+    }
+
+    func main() {
+        txt := "ABABDABACDABABCABAB"
+        pat := "ABABCABAB"
+        zSearch(txt, pat)
+    }
     ```
     </details>
 
