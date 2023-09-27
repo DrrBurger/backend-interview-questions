@@ -5673,8 +5673,6 @@ P.S.S.
 
   </details>
 
----
-
 <!-- Строки -->
 - <details>
     <summary><b><i>Строки</i></b></summary>
@@ -5714,8 +5712,6 @@ P.S.S.
 
   </details>
 
----
-
 <!-- Численные типы -->
 - <details>
     <summary><b><i>Численные типы</i></b></summary>
@@ -5754,8 +5750,6 @@ P.S.S.
   ---
 
   </details>
-
----
 
 <!-- Списки (list) -->
 - <details>
@@ -5800,8 +5794,6 @@ P.S.S.
   ---
 
   </details>
-
----
 
 <!-- Картежи (tuple) -->
 - <details>
@@ -5850,8 +5842,6 @@ P.S.S.
 
   </details>
 
----
-
 <!-- Множества (set) -->
 - <details>
     <summary><b><i>Множества (set)</i></b></summary>
@@ -5892,8 +5882,6 @@ P.S.S.
   ---
 
   </details>
-
----
 
 <!-- Словари (dict) -->
 - <details>
@@ -5938,8 +5926,6 @@ P.S.S.
 
   </details>
 
----
-
 <!-- Булевы типы (bool) -->
 - <details>
     <summary><b><i>Булевы типы (bool)</i></b></summary>
@@ -5971,8 +5957,6 @@ P.S.S.
   ---
 
   </details>
-
----
 
 <!-- NoneType (None) -->
 - <details>
@@ -6008,8 +5992,6 @@ P.S.S.
 
   </details>
 
----
-
 <!-- ООП в Python -->
 - <details>
     <summary><b><i>ООП в Python</i></b></summary>
@@ -6041,8 +6023,6 @@ P.S.S.
   ---
 
   </details>
-
----
 
 <!-- Сборщик мусора в Python -->
 - <details>
@@ -6076,8 +6056,6 @@ P.S.S.
   ---
 
   </details>
-
----
 
 <!-- Обработка исключений -->
 - <details>
